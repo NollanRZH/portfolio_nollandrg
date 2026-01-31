@@ -537,30 +537,51 @@ body:not(.user-is-tabbing) a:focus {
 .about__content {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Texte */
+.about__text {
+    flex: 0 0 40%;
+    text-align: left;
+}
+
+/* Photo */
+.about__photo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-@media(max-width: 900px) {
+.about__photo-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* -------------------- */
+/* Responsive Mobile */
+/* -------------------- */
+
+@media (max-width: 900px) {
     .about__content {
         flex-direction: column-reverse;
-        align-items: initial;
+        text-align: center;
+        gap: 2rem;
     }
-}
 
-.about__photo-container {
-    margin-bottom: var(--gutter-normal);
-}
-
-@media(min-width: 901px) {
     .about__text {
-        flex: 0 0 35%;
-    }
-    
-    .about__photo-container {
         flex: 1;
-        margin: 0 var(--gutter-huge) 0 0;
+        text-align: center;
     }
 }
+
 
 /* --------------------------------------- */
 /* ----- Stages Section ----- */
