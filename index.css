@@ -563,6 +563,60 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
+/* ----- Stages Section ----- */
+/* --------------------------------------- */
+
+#stages .about__content {
+    display: block;
+}
+
+#stages .about__text {
+    flex: none;
+    max-width: 100%;
+}
+
+#stages p {
+    max-width: 100%;
+}
+
+/* --------------------------------------- */
+/* ----- Compétences Tables ----- */
+/* --------------------------------------- */
+
+#competences .about__content {
+    display: block;
+}
+
+#competences .about__text {
+    flex: none;
+    max-width: 100%;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto 2rem auto;
+    border-collapse: collapse;
+}
+
+table thead tr {
+    background-color: var(--pink);
+    color: var(--white);
+}
+
+table th,
+table td {
+    padding: 1rem;
+    border: 1px solid #444;
+    text-align: left;
+}
+
+@media(max-width: 900px) {
+    table {
+        width: 100%;
+    }
+}
+
+/* --------------------------------------- */
 /* ----- Contact ----- */
 /* --------------------------------------- */
 
