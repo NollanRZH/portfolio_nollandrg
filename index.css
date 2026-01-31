@@ -440,70 +440,33 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Work ----- */
 /* --------------------------------------- */
 
+/* ---- WORK SANS IMAGE : CENTRÉ ---- */
+
 .work__box {
-    display: flex;
-    align-items: center;
-}
-
-@media(max-width: 900px) {
-    .work__box {
-        align-items: initial;
-        flex-direction: column-reverse;
-    }
-}
-
-.work__box:not(:last-child) {
-    margin-bottom: 25rem;
-}
-
-@media(max-width: 500px) {
-    .work__box:not(:last-child) {
-        margin-bottom: 20rem;
-    }
-}
-
-.work__links {
-    display: flex;
-    align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 .work__text {
-    flex: 0 0 30%;
+  flex: 0 1 650px;
+  text-align: center;
 }
 
-.work__list {
-    /* list-style-type: square; */
-    list-style-position: inside;
-    margin-bottom: var(--gutter-normal);
+.work__links {
+  display: flex;
+  justify-content: center;
 }
 
 .work__code {
-    display: block;
-    height: 3rem;
-    margin-left: var(--gutter-normal);
-    transition: all .3s;
+  margin-left: 0;
 }
 
-.work__code:hover {
-    transform: scale(1.2);
+.work__list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
 }
 
-.work__image-box {
-    margin-bottom: var(--gutter-normal);
-}
-
-@media(min-width: 901px) {
-    .work__image-box {
-        flex: 1;
-        margin: 0 0 0 10rem;
-    }
-}
-
-@media(max-width: 900px) {
-    .work__code {
-        height: 4rem;
-    }
-}
 
 /* --------------------------------------- */
 /* ----- Clients ----- */
