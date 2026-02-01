@@ -25,6 +25,7 @@
     <div class="row">
       <nav class="nav" role="navigation">
         <ul class="nav__items">
+          <li class="nav__item"><a href="#cv" class="nav__link">CV</a></li>
           <li class="nav__item"><a href="#clients" class="nav__link">Experiences</a></li>
           <li class="nav__item">
             <a href="#about" class="nav__link">Presentation</a>
@@ -53,22 +54,74 @@
 
   <main role="main">
 
-<div class="work__box">
-  <div class="work__text">
-    <h3>Bienvenue sur mon Portfolio ! ;-)</h3>
-   
+    <!-- ***** Welcome Section ***** -->
+    <section class="welcome" id="welcome">
+      <div class="row">
+        <div class="welcome__content">
+          <div class="welcome__animation">
+            <div class="terminal">
+              <div class="terminal__header">
+                <span class="terminal__dot terminal__dot--red"></span>
+                <span class="terminal__dot terminal__dot--yellow"></span>
+                <span class="terminal__dot terminal__dot--green"></span>
+              </div>
+              <div class="terminal__body">
+                <p class="terminal__line">$ nollan@portfolio:~$ whoami</p>
+                <p class="terminal__line terminal__output">Nollan Droguet - BTS SIO SISR</p>
+                <p class="terminal__line">$ nollan@portfolio:~$ ls skills/</p>
+                <p class="terminal__line terminal__output">Systèmes  Réseaux  Cybersécurité  Support-IT</p>
+                <p class="terminal__line">$ nollan@portfolio:~$ cat passion.txt</p>
+                <p class="terminal__line terminal__output">CTF | Administration | Stade Rennais ⚫🔴</p>
+                <p class="terminal__line terminal__cursor">█</p>
+              </div>
+            </div>
+          </div>
+          <div class="welcome__text">
+            <h2>Bienvenue sur mon Portfolio !</h2>
+            <p>
+              Découvrez mon parcours, mes compétences et mes projets en administration systèmes et réseaux. 
+              Passionné par la cybersécurité et les infrastructures IT, je suis actuellement en recherche 
+              d'opportunités pour mettre mes compétences au service de votre entreprise.
+            </p>
+            <div class="welcome__links">
+              <a href="#cv" class="btn btn--pink">Voir mon CV</a>
+              <a href="https://github.com/NollanRZH/" target="_blank" class="btn">
+                <img src="./images/github.svg" style="height: 2rem; vertical-align: middle; margin-right: 0.5rem;" alt="GitHub">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
-    <div class="work__links">
-      <a href="https://github.com/NollanRZH/portfolio" title="View Source GithubPage" target="_blank">
-        <img src="./images/github.svg" class="work__code" alt="GitHub">
-      </a>
-    </div>
-  </div>
-</div>
+    <!-- ***** CV Section ***** -->
+    <section class="cv-section" id="cv">
+      <div class="row">
+        <h2>Mon CV</h2>
+        <div class="cv-container">
+          <div class="cv-viewer">
+            <img src="./images/nollan_cv.png" alt="CV de Nollan Droguet" id="cv-image" class="cv-image">
+            <div class="cv-controls">
+              <button class="cv-btn" id="zoom-in">
+                <span>🔍+</span>
+              </button>
+              <button class="cv-btn" id="zoom-out">
+                <span>🔍-</span>
+              </button>
+              <button class="cv-btn" id="reset-zoom">
+                <span>↺</span>
+              </button>
+              <a href="./images/nollan_cv.png" download class="cv-btn cv-download">
+                <span>⬇ Télécharger</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ***** Clients ***** -->
-
     <section class="client" id="clients">
       <div class="row">
         <h2>Expériences</h2>
@@ -83,7 +136,6 @@
     </section>
 
     <!-- ***** About ***** -->
-
     <section class="about" id="about">
       <div class="row">
         <h2>Presentation</h2>
@@ -108,7 +160,6 @@
     </section>
 
     <!-- ***** Veille ***** -->
-
     <section class="about" id="veille">
       <div class="row">
         <h2>Veille Technologique</h2>
@@ -144,7 +195,6 @@
     </section>
 
     <!-- ***** Stages ***** -->
-
     <section class="about" id="stages">
       <div class="row">
         <h2>Mes Stages - Carl Zeiss Vision France</h2>
@@ -208,7 +258,6 @@
     </section>
 
     <!-- ***** Compétences ***** -->
-
     <section class="about" id="competences">
       <div class="row">
         <h2>Mes Compétences BTS SIO SISR</h2>
