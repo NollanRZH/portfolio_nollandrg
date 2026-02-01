@@ -834,6 +834,100 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
+/* ----- Veille Section - Enhanced ----- */
+/* --------------------------------------- */
+
+#veille {
+    background: linear-gradient(135deg, #050505 0%, #0a0000 100%);
+}
+
+#veille .about__content {
+    display: block;
+    max-width: 1000px;
+}
+
+#veille .about__text {
+    flex: none;
+    max-width: 100%;
+}
+
+#veille p {
+    max-width: 100%;
+    line-height: 1.9;
+    font-size: 1.7rem;
+    text-align: justify;
+    color: #d0d0d0;
+}
+
+#veille h3 {
+    color: var(--red);
+    font-size: 2.8rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(226, 0, 26, 0.3);
+}
+
+#veille h4 {
+    color: #ff6b6b;
+    font-size: 2.2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Jost', sans-serif;
+}
+
+#veille .work__list {
+    background: rgba(226, 0, 26, 0.05);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--red);
+    margin: 2rem 0;
+}
+
+#veille .work__list li {
+    margin-bottom: 1.2rem;
+    line-height: 1.8;
+    font-size: 1.6rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+#veille .work__list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--red);
+    font-weight: bold;
+}
+
+#veille .work__list li strong {
+    color: var(--red);
+    font-weight: 600;
+}
+
+/* Cartes d'information pour les points clés */
+#veille > .row > h2 {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 3rem;
+}
+
+@media(max-width: 900px) {
+    #veille p {
+        text-align: left;
+        font-size: 1.6rem;
+    }
+    
+    #veille h3 {
+        font-size: 2.4rem;
+    }
+    
+    #veille h4 {
+        font-size: 2rem;
+    }
+}
+
+/* --------------------------------------- */
 /* ----- Stages Section ----- */
 /* --------------------------------------- */
 
