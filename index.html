@@ -47,7 +47,7 @@
         </h1>
         <!-- Put a small paragraph about yourself -->
         <p>IT Student | Administration Systèmes & Réseaux | Rennes, France.</p>
-        <a href="#contact" class="btn btn--pink">Me Contacter</a>
+        <a href="#contact" class="btn btn--red">Me Contacter</a>
       </div>
     </div>
   </header>
@@ -66,12 +66,12 @@
                 <span class="terminal__dot terminal__dot--green"></span>
               </div>
               <div class="terminal__body">
-                <p class="terminal__line">$ nollan@portfolio:~$ whoami</p>
+                <p class="terminal__line">$ nollan@roazhon:~$ whoami</p>
                 <p class="terminal__line terminal__output">Nollan Droguet - BTS SIO SISR</p>
-                <p class="terminal__line">$ nollan@portfolio:~$ ls skills/</p>
+                <p class="terminal__line">$ nollan@roazhon:~$ ls skills/</p>
                 <p class="terminal__line terminal__output">Systèmes  Réseaux  Cybersécurité  Support-IT</p>
-                <p class="terminal__line">$ nollan@portfolio:~$ cat passion.txt</p>
-                <p class="terminal__line terminal__output">CTF | Administration | Stade Rennais</p>
+                <p class="terminal__line">$ nollan@roazhon:~$ cat passion.txt</p>
+                <p class="terminal__line terminal__output">CTF | Administration | Stade Rennais 🔴⚫</p>
                 <p class="terminal__line terminal__cursor">█</p>
               </div>
             </div>
@@ -84,7 +84,7 @@
               d'opportunités pour mettre mes compétences au service de votre entreprise.
             </p>
             <div class="welcome__links">
-              <a href="#cv" class="btn btn--pink">Voir mon CV</a>
+              <a href="#cv" class="btn btn--red">Voir mon CV</a>
               <a href="https://github.com/NollanRZH/" target="_blank" class="btn">
                 <img src="./images/github.svg" style="height: 2rem; vertical-align: middle; margin-right: 0.5rem;" alt="GitHub">
                 GitHub
@@ -124,13 +124,79 @@
     <!-- ***** Clients ***** -->
     <section class="client" id="clients">
       <div class="row">
-        <h2>Expériences</h2>
-        <div class="client__logos">
-          <!-- Add logos of the clients or companies you'have worked with. -->
-          <img src="./images/actual-computer-logo.png" class="client__logo" alt="Actual Computer" />
-          <img src="./images/restaurant_laselloise.png" class="client__logo" alt="Restaurant La Selloise" />
-          <img src="./images/zeiss-logo.png" class="client__logo" alt="Carl Zeiss Vision" />
-          <img src="./images/vival-by-casino-logo.png" class="client__logo" alt="Vival by Casino" />
+        <h2>Mes Expériences Professionnelles</h2>
+        <p class="client__intro">Découvrez les entreprises avec lesquelles j'ai eu l'opportunité de collaborer</p>
+        <div class="client__grid">
+          
+          <div class="client__card">
+            <div class="client__logo-container">
+              <img src="./images/zeiss-logo.png" class="client__logo-large" alt="Carl Zeiss Vision" />
+            </div>
+            <div class="client__info">
+              <h3>Carl Zeiss Vision France</h3>
+              <p class="client__role">Stagiaire Service Informatique</p>
+              <p class="client__description">
+                Deux stages en administration systèmes et réseaux au sein du leader mondial de l'optique de précision.
+              </p>
+              <div class="client__tags">
+                <span class="client__tag">Windows Server</span>
+                <span class="client__tag">Support IT</span>
+                <span class="client__tag">Réseaux CISCO</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="client__card">
+            <div class="client__logo-container">
+              <img src="./images/actual-computer-logo.png" class="client__logo-large" alt="Actual Computer" />
+            </div>
+            <div class="client__info">
+              <h3>Actual Computer</h3>
+              <p class="client__role">Expérience Professionnelle</p>
+              <p class="client__description">
+                Collaboration avec une entreprise spécialisée en solutions informatiques.
+              </p>
+              <div class="client__tags">
+                <span class="client__tag">Informatique</span>
+                <span class="client__tag">Solutions IT</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="client__card">
+            <div class="client__logo-container">
+              <img src="./images/restaurant_laselloise.png" class="client__logo-large" alt="Restaurant La Selloise" />
+            </div>
+            <div class="client__info">
+              <h3>Restaurant La Selloise</h3>
+              <p class="client__role">Expérience Professionnelle</p>
+              <p class="client__description">
+                Expérience dans le secteur de la restauration.
+              </p>
+              <div class="client__tags">
+                <span class="client__tag">Service Client</span>
+                <span class="client__tag">Restauration</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="client__card">
+            <div class="client__logo-container">
+              <img src="./images/vival-by-casino-logo.png" class="client__logo-large" alt="Vival by Casino" />
+            </div>
+            <div class="client__info">
+              <h3>Vival by Casino</h3>
+              <p class="client__role">Expérience Professionnelle</p>
+              <p class="client__description">
+                Expérience dans le commerce et la grande distribution.
+              </p>
+              <div class="client__tags">
+                <span class="client__tag">Commerce</span>
+                <span class="client__tag">Service Client</span>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -138,7 +204,7 @@
     <!-- ***** About ***** -->
     <section class="about" id="about">
       <div class="row">
-        <h2>Presentation</h2>
+        <h2>Présentation</h2>
         <div class="about__content">
           <div class="about__text">
             <!-- Replace the below paragraph with info about yourself -->
@@ -271,7 +337,7 @@
             <h3>Bloc 1 - Support et mise à disposition des services informatiques</h3>
             <table style="width: 80%; margin: 0 auto 2rem auto; border-collapse: collapse;">
               <thead>
-                <tr style="background-color: var(--pink); color: var(--white);">
+                <tr style="background-color: var(--red); color: var(--white);">
                   <th style="padding: 1rem; text-align: left; border: 1px solid #444;">Compétence</th>
                 </tr>
               </thead>
@@ -300,7 +366,7 @@
             <h3>Bloc 2 - Administration des systèmes et des réseaux (SISR)</h3>
             <table style="width: 80%; margin: 0 auto 2rem auto; border-collapse: collapse;">
               <thead>
-                <tr style="background-color: var(--pink); color: var(--white);">
+                <tr style="background-color: var(--red); color: var(--white);">
                   <th style="padding: 1rem; text-align: left; border: 1px solid #444;">Compétence</th>
                 </tr>
               </thead>
@@ -320,7 +386,7 @@
             <h3>Bloc 3 - Cybersécurité des services informatiques</h3>
             <table style="width: 80%; margin: 0 auto 2rem auto; border-collapse: collapse;">
               <thead>
-                <tr style="background-color: var(--pink); color: var(--white);">
+                <tr style="background-color: var(--red); color: var(--white);">
                   <th style="padding: 1rem; text-align: left; border: 1px solid #444;">Compétence</th>
                 </tr>
               </thead>
