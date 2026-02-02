@@ -12,7 +12,6 @@
   </title>
 
   <meta name="description" content="Portfolio de Nollan Droguet, étudiant en BTS SIO SISR passionné par l'administration systèmes et réseaux et la cybersécurité.">
-  <!-- Add some coding keywords below, Ex: (React, CSS etc) -->
   <meta name="keywords" content="Nollan Droguet, BTS SIO, SISR, Administration Systèmes, Réseaux, Cybersécurité, Support IT" />
   <link rel="stylesheet" href="index.css" />
 </head>
@@ -24,15 +23,16 @@
   <header class="header" role="banner" id="top">
     <div class="row">
       <nav class="nav" role="navigation">
-        <ul class="nav__items">
+        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav__items" id="nav-menu">
           <li class="nav__item"><a href="#cv" class="nav__link">CV</a></li>
           <li class="nav__item"><a href="#clients" class="nav__link">Experiences</a></li>
-          <li class="nav__item">
-            <a href="#about" class="nav__link">Presentation</a>
-          </li>
-          <li class="nav__item">
-            <a href="#contact" class="nav__link">Contacts</a>
-          </li>
+          <li class="nav__item"><a href="#about" class="nav__link">Presentation</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contacts</a></li>
           <li class="nav__item"><a href="#veille" class="nav__link">Veille</a></li>
           <li class="nav__item"><a href="#stages" class="nav__link">Stages</a></li>
           <li class="nav__item"><a href="#competences" class="nav__link">Compétences</a></li>
@@ -42,10 +42,8 @@
     <div class="header__text-box row">
       <div class="header__text">
         <h1 class="heading-primary">
-          
           <span>Nollan Droguet</span>
         </h1>
-        
         <p>IT Student | Administration Systèmes & Réseaux | Rennes, France.</p>
         <a href="#contact" class="btn btn--red">Me Contacter</a>
       </div>
@@ -208,18 +206,15 @@
         <h2>Présentation</h2>
         <div class="about__content">
           <div class="about__text">
-            
             <p>
               Bonjour, je suis Nollan Droguet immense fan du Stade Rennais, sympathisant au sein du RCK1991, et étudiant en BTS SIO option SISR (2ᵉ année).
               Passionné par l'informatique et... la culture ultra, je m'intéresse particulièrement à l'administration systèmes et réseaux, au support IT et à la cybersécurité.
               Je pratique régulièrement des Capture The Flag (CTF) afin de développer mes compétences en sécurité informatique et en résolution de problèmes.
               Titulaire d'un Bac Professionnel Systèmes Numériques (option RISC), j'ai également effectué plusieurs stages au sein du service informatique de Carl Zeiss Vision France à Fougères, où j'ai participé à des missions de support, de maintenance et d'assistance aux utilisateurs.
             </p>
-
           </div>
 
           <div class="about__photo-container">
-            
             <img class="about__photo" src="./images/nollan_roazhon.jpg" alt="Nollan Droguet" />
           </div>
         </div>
@@ -236,6 +231,24 @@
               Dans le cadre de ma formation et de ma passion pour l'informatique, j'effectue une veille technologique régulière 
               sur les domaines de la cybersécurité, de l'intelligence économique et de la souveraineté numérique.
             </p>
+
+            <!-- Vidéo Micode -->
+            <div class="veille__video-container">
+              <h3>📹 Le Plus Grand Complot de la Tech Française - Micode</h3>
+              <p class="veille__video-intro">
+                Découvrez l'affaire Gemplus racontée par Micode, un cas d'école en espionnage économique et guerre technologique qui a bouleversé l'industrie française de la carte à puce.
+              </p>
+              <div class="veille__video-wrapper">
+                <video controls class="veille__video">
+                  <source src="./images/0201Gemplus_comp.mp4" type="video/mp4">
+                  Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+              </div>
+              <p class="veille__video-caption">
+                <strong>Source :</strong> Micode - "Le complot le plus grave de la tech française" | 
+                <a href="https://www.youtube.com/@Micode" target="_blank" class="veille__link">Chaîne YouTube de Micode</a>
+              </p>
+            </div>
             
             <h3>L'affaire Gemplus : Cas d'École en Espionnage Économique</h3>
             <p>
@@ -588,7 +601,7 @@
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/nollan-droguet/" title="Link to Linkedin Profile">
+          <a href="https://www.linkedin.com/in/nollan-d-171812341/" title="Link to Linkedin Profile">
             <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
           </a>
         </li>
