@@ -123,8 +123,59 @@ document.addEventListener('DOMContentLoaded', function() {
             const isClickInside = navMenu.contains(event.target) || navToggle.contains(event.target);
             if (!isClickInside && navMenu.classList.contains('active')) {
                 navMenu.classList.remove('active');
-                navToggle.classList.toggle('active');
+                navToggle.classList.remove('active');
             }
         });
     }
+
+    /* -----------------------------------------
+      Language Toggle
+     ---------------------------------------- */
+    const langToggle = document.getElementById('lang-toggle');
+    const langFlag = document.querySelector('.lang-flag');
+    const langText = document.querySelector('.lang-text');
+    let currentLang = 'fr';
+
+    // Function to change language
+    function switchLanguage(lang) {
+        currentLang = lang;
+        
+        // Update all elements with data-fr and data-en attributes
+                document.querySelectorAll('[data-fr][data-en]').forEach(element => {
+            if (lang === 'fr') {
+                element.textContent = element.getAttribute('data-fr');
+            } else {
+                element.textContent = element.getAttribute('data-en');
+            }
+        });
+
+        // Update button
+        if (lang === 'fr') {
+            langFlag.textContent = '🇫🇷';
+            langText.textContent = 'FR';
+            document.documentElement.lang = 'fr';
+        } else {
+            langFlag.textContent = '🇬🇧';
+            langText.textContent = 'EN';
+            document.documentElement.lang = 'en';
+        }
+
+        // Save preference to localStorage
+        localStorage.setItem('preferredLanguage', lang);
+    }
+
+    // Load saved language preference
+    const savedLang = localStorage.getItem('preferredLanguage');
+    if (savedLang) {
+        switchLanguage(savedLang);
+    }
+
+    // Language toggle click event
+    if (langToggle) {
+        langToggle.addEventListener('click', function() {
+            const newLang = currentLang === 'fr' ? 'en' : 'fr';
+            switchLanguage(newLang);
+        });
+    }
 });
+
