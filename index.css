@@ -337,7 +337,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .nav {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding: var(--gutter-normal) 0;
     position: relative;
@@ -369,6 +369,36 @@ body:not(.user-is-tabbing) a:focus {
     margin: 4px 0;
     transition: all 0.3s ease;
     border-radius: 3px;
+}
+
+/* Language Toggle Button */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+    border: 2px solid var(--red);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-stack);
+    font-size: 1.6rem;
+    color: var(--white);
+}
+
+.lang-toggle:hover {
+    background: var(--red);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(226, 0, 26, 0.4);
+}
+
+.lang-flag {
+    font-size: 2rem;
+}
+
+.lang-text {
+    font-weight: 600;
 }
 
 @media(max-width: 768px) {
@@ -419,6 +449,13 @@ body:not(.user-is-tabbing) a:focus {
     
     .nav__toggle.active span:nth-child(3) {
         transform: rotate(-45deg) translate(8px, -8px);
+    }
+
+    .lang-toggle {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        z-index: 999;
     }
 }
 
@@ -974,6 +1011,14 @@ body:not(.user-is-tabbing) a:focus {
     text-align: center;
     font-size: 4.5rem;
     margin-bottom: 3rem;
+}
+
+.veille__note {
+    background: rgba(226, 0, 26, 0.1);
+    padding: 1.5rem;
+    border-left: 4px solid var(--red);
+    margin: 2rem 0;
+    font-style: italic;
 }
 
 /* Video Container Styles */
