@@ -151,9 +151,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update button
         if (lang === 'fr') {
+            langFlag.textContent = '🇫🇷';
             langText.textContent = 'FR';
             document.documentElement.lang = 'fr';
         } else {
+            langFlag.textContent = '🇬🇧';
             langText.textContent = 'EN';
             document.documentElement.lang = 'en';
         }
