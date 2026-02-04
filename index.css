@@ -13,7 +13,7 @@
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
-    src: url('./fonts/Jost-Regular.ttf') format('woff');
+    src: url('./fonts/Jost-Regular.ttf') format('truetype');
 }
 
 * {
@@ -39,10 +39,9 @@
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
 
-
     --container-max-width: 1180px;
     --container-normal-width: 800px;
-    --container-medium-width: 700px; 
+    --container-medium-width: 700px;
     --container-small-width: 500px;
 
     --gutter-huge: 12rem;
@@ -60,7 +59,7 @@ html {
     scroll-behavior: smooth;
 }
 
-@media(max-width: 1000px) {
+@media (max-width: 1000px) {
     html {
         font-size: 52%;
     }
@@ -81,25 +80,25 @@ body {
     margin: 0 auto;
 }
 
-@media(max-width: 1340px) {
+@media (max-width: 1340px) {
     .row {
         max-width: 1100px;
     }
 }
 
-@media(max-width: 1240px) {
+@media (max-width: 1240px) {
     .row {
         padding: 0 var(--gutter-medium);
     }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
     .row {
         padding: 0 var(--gutter-normal);
     }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
     .row {
         padding: 0 var(--gutter-small);
     }
@@ -134,7 +133,7 @@ h3 {
     font-weight: 400;
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
     .heading-primary {
         font-size: 6.5rem;
     }
@@ -159,7 +158,7 @@ h3 {
     margin-bottom: var(--gutter-small);
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
     .heading-primary {
         font-size: var(--font-size-large);
     }
@@ -177,8 +176,8 @@ p {
     margin: var(--gutter-small-1) 0;
 }
 
-@media(max-width: 900px) {
-    p { 
+@media (max-width: 900px) {
+    p {
         max-width: var(--container-small-width);
     }
 }
@@ -219,7 +218,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: 1rem 4.2rem;
     text-decoration: none;
     color: inherit;
-    border: 1px solid  var(--red);
+    border: 1px solid var(--red);
     font-weight: 400;
 }
 
@@ -287,7 +286,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .link__text:hover::after,
-.link__text:focus:after {
+.link__text:focus::after {
     right: 0;
     background: var(--red);
 }
@@ -319,13 +318,13 @@ body:not(.user-is-tabbing) a:focus {
     height: 70%;
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
     .back-to-top {
         right: 2rem;
     }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
     .back-to-top {
         right: 1rem;
     }
@@ -401,11 +400,11 @@ body:not(.user-is-tabbing) a:focus {
     font-weight: 600;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .nav__toggle {
         display: flex;
     }
-    
+
     .nav__items {
         position: fixed;
         top: 0;
@@ -420,33 +419,33 @@ body:not(.user-is-tabbing) a:focus {
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
         z-index: 1000;
     }
-    
+
     .nav__items.active {
         right: 0;
     }
-    
+
     .nav__item {
         margin: 0 !important;
         padding: 0;
         width: 100%;
         text-align: center;
     }
-    
+
     .nav__link {
         display: block;
         padding: 2rem !important;
         font-size: 2rem;
         border-bottom: 1px solid rgba(226, 0, 26, 0.2);
     }
-    
+
     .nav__toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(9px, 9px);
     }
-    
+
     .nav__toggle.active span:nth-child(2) {
         opacity: 0;
     }
-    
+
     .nav__toggle.active span:nth-child(3) {
         transform: rotate(-45deg) translate(8px, -8px);
     }
@@ -459,12 +458,12 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
     .nav {
         justify-content: space-between;
         padding: 2rem var(--gutter-small);
     }
-    
+
     .nav__items {
         width: 80%;
     }
@@ -506,7 +505,7 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .header {
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .4)),
         url('./images/header.jpg');
     height: 100vh;
     background-size: cover;
@@ -528,7 +527,7 @@ body:not(.user-is-tabbing) a:focus {
     font-size: var(--font-size-medium);
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
     .header {
         text-align: center;
     }
@@ -544,7 +543,7 @@ body:not(.user-is-tabbing) a:focus {
 
 .welcome {
     padding: var(--gutter-huge) 0;
-    background: linear-gradient(135deg, rgba(0,0,0,0.95) 0%, rgba(20,20,20,0.95) 100%);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95) 0%, rgba(20, 20, 20, 0.95) 100%);
 }
 
 .welcome__content {
@@ -634,8 +633,10 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 @keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
+    0%,
+    50% { opacity: 1; }
+    51%,
+    100% { opacity: 0; }
 }
 
 .terminal__output {
@@ -666,12 +667,12 @@ body:not(.user-is-tabbing) a:focus {
     flex-wrap: wrap;
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
     .welcome__content {
         flex-direction: column;
         gap: 4rem;
     }
-    
+
     .welcome__text p {
         max-width: 100%;
     }
@@ -748,11 +749,11 @@ body:not(.user-is-tabbing) a:focus {
     background: #1fa832;
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
     .cv-controls {
         flex-direction: column;
     }
-    
+
     .cv-btn {
         width: 100%;
     }
@@ -881,7 +882,7 @@ body:not(.user-is-tabbing) a:focus {
     border-color: var(--red);
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
     .client__grid {
         grid-template-columns: 1fr;
     }
@@ -1079,24 +1080,207 @@ body:not(.user-is-tabbing) a:focus {
     color: #ff6b6b;
 }
 
-@media(max-width: 900px) {
+/* --------------------------------------- */
+/* ----- NOUVELLE CARTE VEILLE ----- */
+/* --------------------------------------- */
+
+.veille-card {
+    background: linear-gradient(145deg, #1a1a1a 0%, #0f0f0f 100%);
+    border-radius: 16px;
+    padding: 4rem;
+    margin: 6rem 0;
+    border: 2px solid rgba(226, 0, 26, 0.3);
+    box-shadow: 0 15px 50px rgba(226, 0, 26, 0.2);
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.veille-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--red) 0%, #ff6b6b 50%, var(--red) 100%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s ease;
+}
+
+.veille-card:hover::before {
+    transform: scaleX(1);
+}
+
+.veille-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--red);
+    box-shadow: 0 25px 60px rgba(226, 0, 26, 0.4);
+}
+
+.veille-card__icon {
+    font-size: 8rem;
+    line-height: 1;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(226, 0, 26, 0.1);
+    border-radius: 50%;
+    padding: 2rem;
+    transition: all 0.4s ease;
+}
+
+.veille-card:hover .veille-card__icon {
+    transform: scale(1.1) rotate(5deg);
+    background: rgba(226, 0, 26, 0.2);
+}
+
+.veille-card__content {
+    flex: 1;
+}
+
+.veille-card__content h3 {
+    color: var(--red);
+    font-size: 2.8rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.veille-card__content p {
+    font-size: 1.7rem;
+    line-height: 1.8;
+    color: #d0d0d0;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.veille-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.veille-meta__tag {
+    background: rgba(226, 0, 26, 0.15);
+    color: #ff6b6b;
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1.4rem;
+    border: 1px solid rgba(226, 0, 26, 0.3);
+    transition: all 0.3s ease;
+}
+
+.veille-card:hover .veille-meta__tag {
+    background: rgba(226, 0, 26, 0.25);
+    border-color: var(--red);
+    transform: translateY(-2px);
+}
+
+.veille-card__actions {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.veille-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2.5rem;
+    border-radius: 8px;
+    font-size: 1.6rem;
+    font-family: var(--font-stack);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.veille-btn--view {
+    background: var(--red);
+    color: var(--white);
+    border-color: var(--red);
+}
+
+.veille-btn--view:hover {
+    background: transparent;
+    color: var(--red);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(226, 0, 26, 0.4);
+}
+
+.veille-btn--download {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--red);
+}
+
+.veille-btn--download:hover {
+    background: var(--red);
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(226, 0, 26, 0.4);
+}
+
+/* Variante couleur pour IA (bleue-cyan) */
+.veille-card--ai .veille-card__icon {
+    background: linear-gradient(145deg, rgba(0, 119, 255, 0.15), rgba(0, 255, 255, 0.15));
+}
+
+.veille-card--ai:hover .veille-card__icon {
+    background: linear-gradient(145deg, rgba(0, 119, 255, 0.25), rgba(0, 255, 255, 0.25));
+}
+
+/* Responsive pour carte veille */
+@media (max-width: 900px) {
+    .veille-card {
+        flex-direction: column;
+        padding: 3rem;
+        text-align: center;
+    }
+
+    .veille-card__icon {
+        font-size: 6rem;
+        min-width: 100px;
+        margin: 0 auto;
+    }
+
+    .veille-card__actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .veille-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
     #veille p {
         text-align: left;
         font-size: 1.6rem;
     }
-    
+
     #veille h3 {
         font-size: 2.4rem;
     }
-    
+
     #veille h4 {
         font-size: 2rem;
     }
-    
+
     .veille__video-container {
         padding: 2rem;
     }
-    
+
     .veille__video-container h3 {
         font-size: 2.4rem;
     }
@@ -1154,7 +1338,7 @@ table tbody tr:hover {
     background-color: rgba(226, 0, 26, 0.1);
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
     table {
         width: 100%;
     }
@@ -1212,8 +1396,8 @@ table tbody tr:hover {
     transform: translateY(3px);
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
     .footer {
         padding: var(--gutter-medium) 0;
-    } 
+    }
 }
