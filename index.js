@@ -42,20 +42,6 @@ window.addEventListener("scroll", () => {
 });
 
 /* -----------------------------------------
-  Navigation Scroll Effect (NOUVEAU)
- ---------------------------------------- */
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('.nav');
-    if (nav) {
-        if (window.scrollY > 100) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
-        }
-    }
-});
-
-/* -----------------------------------------
   CV Zoom functionality
  ---------------------------------------- */
 
@@ -155,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentLang = lang;
         
         // Update all elements with data-fr and data-en attributes
-        document.querySelectorAll('[data-fr][data-en]').forEach(element => {
+                document.querySelectorAll('[data-fr][data-en]').forEach(element => {
             if (lang === 'fr') {
                 element.textContent = element.getAttribute('data-fr');
             } else {
