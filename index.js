@@ -1,180 +1,156 @@
 /* -----------------------------------------
-  Have focus outline only for keyboard users 
+  Focus outline only for keyboard users 
  ---------------------------------------- */
-
 const handleFirstTab = (e) => {
-  if(e.key === 'Tab') {
-    document.body.classList.add('user-is-tabbing')
-
-    window.removeEventListener('keydown', handleFirstTab)
-    window.addEventListener('mousedown', handleMouseDownOnce)
+  if (e.key === 'Tab') {
+    document.body.classList.add('user-is-tabbing');
+    window.removeEventListener('keydown', handleFirstTab);
+    window.addEventListener('mousedown', handleMouseDownOnce);
   }
-}
+};
 
 const handleMouseDownOnce = () => {
-  document.body.classList.remove('user-is-tabbing')
+  document.body.classList.remove('user-is-tabbing');
+  window.removeEventListener('mousedown', handleMouseDownOnce);
+  window.addEventListener('keydown', handleFirstTab);
+};
 
-  window.removeEventListener('mousedown', handleMouseDownOnce)
-  window.addEventListener('keydown', handleFirstTab)
-}
+window.addEventListener('keydown', handleFirstTab);
 
-window.addEventListener('keydown', handleFirstTab)
-
+/* -----------------------------------------
+  Back to Top
+ ---------------------------------------- */
 const backToTopButton = document.querySelector(".back-to-top");
-let isBackToTopRendered = false;
 
-let alterStyles = (isBackToTopRendered) => {
-  backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
-  backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
-  backToTopButton.style.transform = isBackToTopRendered
-    ? "scale(1)"
-    : "scale(0)";
+const setBackToTop = (visible) => {
+  if (!backToTopButton) return;
+  backToTopButton.style.visibility = visible ? "visible" : "hidden";
+  backToTopButton.style.opacity = visible ? "1" : "0";
+  backToTopButton.style.transform = visible ? "scale(1)" : "scale(0)";
 };
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 700) {
-    isBackToTopRendered = true;
-    alterStyles(isBackToTopRendered);
-  } else {
-    isBackToTopRendered = false;
-    alterStyles(isBackToTopRendered);
-  }
+  setBackToTop(window.scrollY > 700);
 });
 
 /* -----------------------------------------
-  CV Zoom functionality
+  DOMContentLoaded
  ---------------------------------------- */
+document.addEventListener('DOMContentLoaded', function () {
 
-document.addEventListener('DOMContentLoaded', function() {
-    const cvImage = document.getElementById('cv-image');
-    const zoomInBtn = document.getElementById('zoom-in');
-    const zoomOutBtn = document.getElementById('zoom-out');
-    const resetZoomBtn = document.getElementById('reset-zoom');
-    
-    if (cvImage && zoomInBtn && zoomOutBtn && resetZoomBtn) {
-        let scale = 1;
-        const scaleStep = 0.3;
-        const maxScale = 3;
-        const minScale = 1;
-        
-        // Zoom in
-        zoomInBtn.addEventListener('click', function() {
-            if (scale < maxScale) {
-                scale += scaleStep;
-                cvImage.style.transform = `scale(${scale})`;
-                cvImage.classList.add('zoomed');
-            }
-        });
-        
-        // Zoom out
-        zoomOutBtn.addEventListener('click', function() {
-            if (scale > minScale) {
-                scale -= scaleStep;
-                cvImage.style.transform = `scale(${scale})`;
-                if (scale === minScale) {
-                    cvImage.classList.remove('zoomed');
-                }
-            }
-        });
-        
-        // Reset zoom
-        resetZoomBtn.addEventListener('click', function() {
-            scale = 1;
-            cvImage.style.transform = `scale(${scale})`;
-            cvImage.classList.remove('zoomed');
-        });
-        
-        // Click on image to toggle zoom
-        cvImage.addEventListener('click', function() {
-            if (scale === minScale) {
-                scale = 2;
-                cvImage.classList.add('zoomed');
-            } else {
-                scale = minScale;
-                cvImage.classList.remove('zoomed');
-            }
-            cvImage.style.transform = `scale(${scale})`;
-        });
+  /* ---- CV Zoom ---- */
+  const cvImage      = document.getElementById('cv-image');
+  const zoomInBtn    = document.getElementById('zoom-in');
+  const zoomOutBtn   = document.getElementById('zoom-out');
+  const resetZoomBtn = document.getElementById('reset-zoom');
+
+  if (cvImage && zoomInBtn && zoomOutBtn && resetZoomBtn) {
+    let scale = 1;
+    const scaleStep = 0.25;
+    const maxScale  = 3;
+    const minScale  = 1;
+
+    const applyScale = () => {
+      cvImage.style.transform = `scale(${scale})`;
+      cvImage.classList.toggle('zoomed', scale > 1);
+    };
+
+    zoomInBtn.addEventListener('click', function () {
+      scale = Math.min(maxScale, scale + scaleStep);
+      applyScale();
+    });
+
+    zoomOutBtn.addEventListener('click', function () {
+      scale = Math.max(minScale, scale - scaleStep);
+      applyScale();
+    });
+
+    resetZoomBtn.addEventListener('click', function () {
+      scale = 1;
+      applyScale();
+    });
+
+    cvImage.addEventListener('click', function () {
+      scale = (scale === 1) ? 2 : 1;
+      applyScale();
+    });
+  }
+
+  /* ---- Mobile Menu Toggle ---- */
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu   = document.getElementById('nav-menu');
+  const navLinks  = document.querySelectorAll('.nav__link');
+
+  if (navToggle && navMenu) {
+    const closeMenu = () => {
+      navMenu.classList.remove('active');
+      navToggle.classList.remove('active');
+      navToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    const openMenu = () => {
+      navMenu.classList.add('active');
+      navToggle.classList.add('active');
+      navToggle.setAttribute('aria-expanded', 'true');
+    };
+
+    navToggle.setAttribute('aria-expanded', 'false');
+
+    navToggle.addEventListener('click', function () {
+      const isOpen = navMenu.classList.contains('active');
+      isOpen ? closeMenu() : openMenu();
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', function (event) {
+      const isClickInside = navMenu.contains(event.target) || navToggle.contains(event.target);
+      if (!isClickInside && navMenu.classList.contains('active')) closeMenu();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) closeMenu();
+    });
+  }
+
+  /* ---- Language Toggle ---- */
+  const langToggle = document.getElementById('lang-toggle');
+  const langFlag   = document.querySelector('.lang-flag');
+  const langText   = document.querySelector('.lang-text');
+  let currentLang  = 'fr';
+
+  function switchLanguage(lang) {
+    currentLang = lang;
+
+    document.querySelectorAll('[data-fr][data-en]').forEach(element => {
+      element.textContent = lang === 'fr'
+        ? element.getAttribute('data-fr')
+        : element.getAttribute('data-en');
+    });
+
+    if (langFlag && langText) {
+      if (lang === 'fr') {
+        langFlag.textContent = '🇫🇷';
+        langText.textContent = 'FR';
+        document.documentElement.lang = 'fr';
+      } else {
+        langFlag.textContent = '🇬🇧';
+        langText.textContent = 'EN';
+        document.documentElement.lang = 'en';
+      }
     }
 
-    /* -----------------------------------------
-      Mobile Menu Toggle
-     ---------------------------------------- */
-    const navToggle = document.getElementById('nav-toggle');
-    const navMenu = document.getElementById('nav-menu');
-    const navLinks = document.querySelectorAll('.nav__link');
+    localStorage.setItem('preferredLanguage', lang);
+  }
 
-    if (navToggle) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
+  const savedLang = localStorage.getItem('preferredLanguage');
+  if (savedLang) switchLanguage(savedLang);
 
-        // Close menu when clicking on a link
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const isClickInside = navMenu.contains(event.target) || navToggle.contains(event.target);
-            if (!isClickInside && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            }
-        });
-    }
-
-    /* -----------------------------------------
-      Language Toggle
-     ---------------------------------------- */
-    const langToggle = document.getElementById('lang-toggle');
-    const langFlag = document.querySelector('.lang-flag');
-    const langText = document.querySelector('.lang-text');
-    let currentLang = 'fr';
-
-    // Function to change language
-    function switchLanguage(lang) {
-        currentLang = lang;
-        
-        // Update all elements with data-fr and data-en attributes
-                document.querySelectorAll('[data-fr][data-en]').forEach(element => {
-            if (lang === 'fr') {
-                element.textContent = element.getAttribute('data-fr');
-            } else {
-                element.textContent = element.getAttribute('data-en');
-            }
-        });
-
-        // Update button
-        if (lang === 'fr') {
-            langFlag.textContent = '🇫🇷';
-            langText.textContent = 'FR';
-            document.documentElement.lang = 'fr';
-        } else {
-            langFlag.textContent = '🇬🇧';
-            langText.textContent = 'EN';
-            document.documentElement.lang = 'en';
-        }
-
-        // Save preference to localStorage
-        localStorage.setItem('preferredLanguage', lang);
-    }
-
-    // Load saved language preference
-    const savedLang = localStorage.getItem('preferredLanguage');
-    if (savedLang) {
-        switchLanguage(savedLang);
-    }
-
-    // Language toggle click event
-    if (langToggle) {
-        langToggle.addEventListener('click', function() {
-            const newLang = currentLang === 'fr' ? 'en' : 'fr';
-            switchLanguage(newLang);
-        });
-    }
+  if (langToggle) {
+    langToggle.addEventListener('click', function () {
+      switchLanguage(currentLang === 'fr' ? 'en' : 'fr');
+    });
+  }
 });

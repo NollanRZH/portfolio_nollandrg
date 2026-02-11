@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
 
-  <!-- Titre -->
   <title>
     Nollan Droguet | Nollan DROGUET | IT Student | Administration Systèmes & Réseaux | Rennes, France.
   </title>
@@ -19,15 +17,14 @@
 <body>
 
   <!-- ***** Header ***** -->
-
   <header class="header" role="banner" id="top">
     <div class="row">
-      <nav class="nav" role="navigation">
-        <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
+      <nav class="nav" role="navigation" aria-label="Navigation principale">
+
+        <button class="nav__toggle" id="nav-toggle" aria-label="Ouvrir / fermer le menu">
+          <span></span><span></span><span></span>
         </button>
+
         <ul class="nav__items" id="nav-menu">
           <li class="nav__item"><a href="#cv" class="nav__link" data-fr="CV" data-en="Resume">CV</a></li>
           <li class="nav__item"><a href="#clients" class="nav__link" data-fr="Experiences" data-en="Experience">Experiences</a></li>
@@ -37,25 +34,48 @@
           <li class="nav__item"><a href="#stages" class="nav__link" data-fr="Stages" data-en="Internships">Stages</a></li>
           <li class="nav__item"><a href="#competences" class="nav__link" data-fr="Compétences" data-en="Skills">Compétences</a></li>
         </ul>
-        <!-- Bouton de langue -->
+
+        <!-- Bouton langue -->
         <button class="lang-toggle" id="lang-toggle" aria-label="Change language">
           <span class="lang-flag">🇫🇷</span>
           <span class="lang-text">FR</span>
         </button>
       </nav>
     </div>
-    <div class="header__text-box row">
-      <div class="header__text">
-        <h1 class="heading-primary">
-          <span>Nollan Droguet</span>
-        </h1>
-        <p data-fr="IT Student | Administration Systèmes & Réseaux | Rennes, France." 
-           data-en="IT Student | Systems & Network Administration | Rennes, France.">
-           IT Student | Administration Systèmes & Réseaux | Rennes, France.
-        </p>
-        <a href="#contact" class="btn btn--red" data-fr="Me Contacter" data-en="Contact Me">Me Contacter</a>
+
+    <!-- Hero (repositionné + “glass card”) -->
+    <div class="header__hero">
+      <div class="row">
+        <div class="hero__card">
+          <div class="hero__kicker" data-fr="Administration • Réseaux • Cybersécurité" data-en="Systems • Networks • Cybersecurity">
+            Administration • Réseaux • Cybersécurité
+          </div>
+
+          <h1 class="heading-primary">
+            <span>Nollan Droguet</span>
+          </h1>
+
+          <p class="hero__subtitle"
+             data-fr="IT Student | Administration Systèmes & Réseaux | Rennes, France."
+             data-en="IT Student | Systems & Network Administration | Rennes, France.">
+            IT Student | Administration Systèmes & Réseaux | Rennes, France.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary" data-fr="Me Contacter" data-en="Contact Me">Me Contacter</a>
+            <a href="#cv" class="btn btn--ghost" data-fr="Voir mon CV" data-en="View my Resume">Voir mon CV</a>
+          </div>
+
+          <div class="hero__meta">
+            <span class="hero__pill">Rennes</span>
+            <span class="hero__pill">BTS SIO SISR</span>
+            <span class="hero__pill">CTF</span>
+          </div>
+        </div>
       </div>
     </div>
+
+    <a class="scroll-indicator" href="#welcome" aria-label="Aller à la section suivante"></a>
   </header>
 
   <main role="main">
@@ -82,22 +102,25 @@
               </div>
             </div>
           </div>
+
           <div class="welcome__text">
             <h2 data-fr="Bienvenue sur mon Portfolio !" data-en="Welcome to my Portfolio!">Bienvenue sur mon Portfolio !</h2>
-            <p data-fr="Découvrez mon parcours, mes compétences et mes projets en administration systèmes et réseaux. Passionné par la cybersécurité et les infrastructures IT, je suis actuellement en recherche d'opportunités pour mettre mes compétences au service de votre entreprise." 
+            <p data-fr="Découvrez mon parcours, mes compétences et mes projets en administration systèmes et réseaux. Passionné par la cybersécurité et les infrastructures IT, je suis actuellement en recherche d'opportunités pour mettre mes compétences au service de votre entreprise."
                data-en="Discover my background, skills and projects in systems and network administration. Passionate about cybersecurity and IT infrastructure, I am currently looking for opportunities to put my skills to work for your company.">
-              Découvrez mon parcours, mes compétences et mes projets en administration systèmes et réseaux. 
-              Passionné par la cybersécurité et les infrastructures IT, je suis actuellement en recherche 
+              Découvrez mon parcours, mes compétences et mes projets en administration systèmes et réseaux.
+              Passionné par la cybersécurité et les infrastructures IT, je suis actuellement en recherche
               d'opportunités pour mettre mes compétences au service de votre entreprise.
             </p>
+
             <div class="welcome__links">
-              <a href="#cv" class="btn btn--red" data-fr="Voir mon CV" data-en="View my Resume">Voir mon CV</a>
-              <a href="https://github.com/NollanRZH/" target="_blank" class="btn">
-                <img src="./images/github.svg" style="height: 2rem; vertical-align: middle; margin-right: 0.5rem;" alt="GitHub">
+              <a href="#cv" class="btn btn--primary" data-fr="Voir mon CV" data-en="View my Resume">Voir mon CV</a>
+              <a href="https://github.com/NollanRZH/" target="_blank" class="btn btn--ghost">
+                <img src="./images/github.svg" class="btn__icon" alt="GitHub">
                 GitHub
               </a>
             </div>
           </div>
+
         </div>
       </div>
     </section>
@@ -106,25 +129,27 @@
     <section class="cv-section" id="cv">
       <div class="row">
         <h2 data-fr="Mon CV" data-en="My Resume">Mon CV</h2>
+
         <div class="cv-container">
           <div class="cv-viewer">
             <img src="./images/nollan_cv.png" alt="CV de Nollan Droguet" id="cv-image" class="cv-image">
             <div class="cv-controls">
-              <button class="cv-btn" id="zoom-in">
+              <button class="btn btn--ghost btn--sm" id="zoom-in" type="button" aria-label="Zoom avant">
                 <span>🔍+</span>
               </button>
-              <button class="cv-btn" id="zoom-out">
+              <button class="btn btn--ghost btn--sm" id="zoom-out" type="button" aria-label="Zoom arrière">
                 <span>🔍-</span>
               </button>
-              <button class="cv-btn" id="reset-zoom">
+              <button class="btn btn--ghost btn--sm" id="reset-zoom" type="button" aria-label="Réinitialiser le zoom">
                 <span>↺</span>
               </button>
-              <a href="./images/nollan_cv.png" download class="cv-btn cv-download">
+              <a href="./images/nollan_cv.png" download class="btn btn--primary btn--sm">
                 <span data-fr="⬇ Télécharger" data-en="⬇ Download">⬇ Télécharger</span>
               </a>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -133,8 +158,9 @@
       <div class="row">
         <h2 data-fr="Mes Expériences Professionnelles" data-en="My Professional Experience">Mes Expériences Professionnelles</h2>
         <p class="client__intro" data-fr="Découvrez les entreprises avec lesquelles j'ai eu l'opportunité de collaborer" data-en="Discover the companies I had the opportunity to work with">Découvrez les entreprises avec lesquelles j'ai eu l'opportunité de collaborer</p>
+
         <div class="client__grid">
-          
+
           <div class="client__card">
             <div class="client__logo-container">
               <img src="./images/zeiss-logo.png" class="client__logo-large" alt="Carl Zeiss Vision" />
@@ -142,7 +168,8 @@
             <div class="client__info">
               <h3>Carl Zeiss Vision France</h3>
               <p class="client__role" data-fr="Stagiaire et Intérimaire – Service Informatique" data-en="IT Department Intern and Temporary IT Technician">Stagiaire et Intérimaire – Service Informatique</p>
-              <p class="client__description" data-fr="31 semaines en administration systèmes et réseaux chez Zeiss, incluant stages et missions intérimaires, au sein du leader mondial de l’optique de précision." data-en="31 weeks of experience in systems and network administration at Zeiss, including internships and temporary assignments, at the global leader in precision optics.">
+              <p class="client__description" data-fr="31 semaines en administration systèmes et réseaux chez Zeiss, incluant stages et missions intérimaires, au sein du leader mondial de l’optique de précision."
+                 data-en="31 weeks of experience in systems and network administration at Zeiss, including internships and temporary assignments, at the global leader in precision optics.">
                 31 semaines en administration systèmes et réseaux chez Zeiss, incluant stages et missions intérimaires, au sein du leader mondial de l’optique de précision.
               </p>
               <div class="client__tags">
@@ -160,7 +187,8 @@
             <div class="client__info">
               <h3>Actual Computer</h3>
               <p class="client__role" data-fr="Stagiaire – Technicien informatique" data-en="IT Technician Intern">Stagiaire – Technicien informatique</p>
-              <p class="client__description" data-fr="Stage au sein d’un revendeur spécialisé en informatique à Rennes, proposant la vente, l’assemblage sur mesure et la maintenance de PC fixes et portables. Participation à la préparation et au reconditionnement de PC pour la vente : assemblage, démontage, nettoyage, remplacement de composants (RAM, stockage) et installation de systèmes Windows." data-en="Internship within an IT reseller in Rennes specialized in PC sales, custom assembly and maintenance of desktop and laptop computers. Involvement in PC preparation and refurbishment for resale: assembly, disassembly, cleaning, component replacement (RAM, storage) and Windows operating system installation.">
+              <p class="client__description" data-fr="Stage au sein d’un revendeur spécialisé en informatique à Rennes, proposant la vente, l’assemblage sur mesure et la maintenance de PC fixes et portables. Participation à la préparation et au reconditionnement de PC pour la vente : assemblage, démontage, nettoyage, remplacement de composants (RAM, stockage) et installation de systèmes Windows."
+                 data-en="Internship within an IT reseller in Rennes specialized in PC sales, custom assembly and maintenance of desktop and laptop computers. Involvement in PC preparation and refurbishment for resale: assembly, disassembly, cleaning, component replacement (RAM, storage) and Windows operating system installation.">
                 Stage au sein d’un revendeur spécialisé en informatique à Rennes, proposant la vente, l’assemblage sur mesure et la maintenance de PC fixes et portables. Participation à la préparation et au reconditionnement de PC pour la vente : assemblage, démontage, nettoyage, remplacement de composants (RAM, stockage) et installation de systèmes Windows.
               </p>
               <div class="client__tags">
@@ -175,10 +203,11 @@
             <div class="client__logo-container">
               <img src="./images/restaurant_laselloise.png" class="client__logo-large" alt="Restaurant La Selloise" />
             </div>
-         <div class="client__info">
+            <div class="client__info">
               <h3>Restaurant La Selloise</h3>
               <p class="client__role" data-fr="Stagiaire – Service et aide en cuisine" data-en="Service and Kitchen Assistant Intern">Stagiaire – Service et aide en cuisine</p>
-              <p class="client__description" data-fr="Stage au sein d’un restaurant traditionnel : service en salle et participation à la préparation des plats (découpe de légumes, préparation des entrées et desserts, aide au dressage des assiettes)." data-en="Internship in a traditional restaurant: table service and assistance in food preparation (vegetable cutting, preparation of starters and desserts, assistance with plating).">
+              <p class="client__description" data-fr="Stage au sein d’un restaurant traditionnel : service en salle et participation à la préparation des plats (découpe de légumes, préparation des entrées et desserts, aide au dressage des assiettes)."
+                 data-en="Internship in a traditional restaurant: table service and assistance in food preparation (vegetable cutting, preparation of starters and desserts, assistance with plating).">
                 Stage au sein d’un restaurant routiers, service en salle et participation à la préparation des plats (découpe de légumes, préparation des entrées et desserts, aide au dressage des assiettes).
               </p>
               <div class="client__tags">
@@ -192,13 +221,14 @@
             <div class="client__logo-container">
               <img src="./images/vival-by-casino-logo.png" class="client__logo-large" alt="Vival by Casino" />
             </div>
-         <div class="client__info">
+            <div class="client__info">
               <h3>Vival by Casino</h3>
               <p class="client__role" data-fr="Stagiaire – Employé de commerce" data-en="Retail Assistant Intern">Stagiaire – Employé de commerce</p>
-              <p class="client__description" data-fr="Stage en magasin de proximité : réception et déballage des colis, mise en rayon des produits, facing et participation à l’organisation de l’espace de vente." data-en="Internship in a convenience store: receiving and unpacking deliveries, stocking shelves, facing, and assisting with sales floor organization.">
+              <p class="client__description" data-fr="Stage en magasin de proximité : réception et déballage des colis, mise en rayon des produits, facing et participation à l’organisation de l’espace de vente."
+                 data-en="Internship in a convenience store: receiving and unpacking deliveries, stocking shelves, facing, and assisting with sales floor organization.">
                 Stage en magasin de proximité : réception et déballage des colis, mise en rayon des produits, facing et participation à l’organisation de l’espace de vente.
               </p>
-                <div class="client__tags">
+              <div class="client__tags">
                 <span class="client__tag" data-fr="Commerce" data-en="Retail">Commerce</span>
                 <span class="client__tag" data-fr="Service Client" data-en="Customer Service">Service Client</span>
               </div>
@@ -215,7 +245,7 @@
         <h2 data-fr="Présentation" data-en="About Me">Présentation</h2>
         <div class="about__content">
           <div class="about__text">
-            <p data-fr="Bonjour, je suis Nollan Droguet immense fan du Stade Rennais, sympathisant au sein du RCK1991, et étudiant en BTS SIO option SISR (2ᵉ année). Passionné par l'informatique et... la culture ultra, je m'intéresse particulièrement à l'administration systèmes et réseaux, au support IT et à la cybersécurité. Je pratique régulièrement des Capture The Flag (CTF) afin de développer mes compétences en sécurité informatique et en résolution de problèmes. Titulaire d'un Bac Professionnel Systèmes Numériques (option RISC), j'ai également effectué plusieurs stages au sein du service informatique de Carl Zeiss Vision France à Fougères, où j'ai participé à des missions de support, de maintenance et d'assistance aux utilisateurs." 
+            <p data-fr="Bonjour, je suis Nollan Droguet immense fan du Stade Rennais, sympathisant au sein du RCK1991, et étudiant en BTS SIO option SISR (2ᵉ année). Passionné par l'informatique et... la culture ultra, je m'intéresse particulièrement à l'administration systèmes et réseaux, au support IT et à la cybersécurité. Je pratique régulièrement des Capture The Flag (CTF) afin de développer mes compétences en sécurité informatique et en résolution de problèmes. Titulaire d'un Bac Professionnel Systèmes Numériques (option RISC), j'ai également effectué plusieurs stages au sein du service informatique de Carl Zeiss Vision France à Fougères, où j'ai participé à des missions de support, de maintenance et d'assistance aux utilisateurs."
                data-en="Hello, I'm Nollan Droguet, a huge Stade Rennais fan, supporter of RCK1991, and a student in BTS SIO SISR option (2nd year). Passionate about IT and... ultra culture, I'm particularly interested in systems and network administration, IT support and cybersecurity. I regularly practice Capture The Flag (CTF) to develop my skills in computer security and problem solving. Holder of a Professional Baccalaureate in Digital Systems (RISC option), I have also completed several internships in the IT department of Carl Zeiss Vision France in Fougères, where I participated in support, maintenance and user assistance missions.">
               Bonjour, je suis Nollan Droguet immense fan du Stade Rennais, sympathisant au sein du RCK1991, et étudiant en BTS SIO option SISR (2ᵉ année).
               Passionné par l'informatique et... la culture ultra, je m'intéresse particulièrement à l'administration systèmes et réseaux, au support IT et à la cybersécurité.
@@ -451,6 +481,7 @@
       </div>
     </section>
 
+
     <!-- ***** Stages ***** -->
     <section class="about" id="stages">
       <div class="row">
@@ -617,27 +648,26 @@
 
   </main>
 
-  <!-- ***** Contact ***** -->
 
+  <!-- ***** Contact ***** -->
   <section class="contact" id="contact">
     <div class="row">
       <h2 data-fr="Me Contacter" data-en="Contact Me">Me Contacter</h2>
       <div class="contact__info">
-        <p data-fr="Vous recherchez un étudiant motivé pour un stage ou une alternance en administration systèmes et réseaux ? Vous avez des questions sur mon parcours ou mes projets ? N'hésitez pas à me contacter par email, je serai ravi d'échanger avec vous ! Je ferai de mon mieux pour vous répondre rapidement. 😊" 
+        <p data-fr="Vous recherchez un étudiant motivé pour un stage ou une alternance en administration systèmes et réseaux ? Vous avez des questions sur mon parcours ou mes projets ? N'hésitez pas à me contacter par email, je serai ravi d'échanger avec vous ! Je ferai de mon mieux pour vous répondre rapidement. 😊"
            data-en="Are you looking for a motivated student for an internship or work-study program in systems and network administration? Do you have questions about my background or projects? Feel free to contact me by email, I will be happy to talk with you! I will do my best to respond quickly. 😊">
-          Vous recherchez un étudiant motivé pour un stage ou une alternance en administration systèmes et réseaux ? 
-          Vous avez des questions sur mon parcours ou mes projets ? 
-          N'hésitez pas à me contacter par email, je serai ravi d'échanger avec vous ! 
+          Vous recherchez un étudiant motivé pour un stage ou une alternance en administration systèmes et réseaux ?
+          Vous avez des questions sur mon parcours ou mes projets ?
+          N'hésitez pas à me contacter par email, je serai ravi d'échanger avec vous !
           Je ferai de mon mieux pour vous répondre rapidement. 😊
         </p>
-        
-        <a href="mailto:nollandroguetpro@gmail.com" class="btn">nollandroguetpro@gmail.com</a>
+
+        <a href="mailto:nollandroguetpro@gmail.com" class="btn btn--primary">nollandroguetpro@gmail.com</a>
       </div>
     </div>
   </section>
 
   <!-- ***** Footer ***** -->
-
   <footer role="contentinfo" class="footer">
     <div class="row">
       <ul class="footer__social-links">
@@ -659,15 +689,16 @@
       </ul>
 
       <p>
-        &copy; 2026 - <span data-fr="Portfolio créé par" data-en="Portfolio created by">Portfolio créé par</span> <a href="#" class="link">Nollan Droguet</a>.
+        &copy; 2026 - <span data-fr="Portfolio créé par" data-en="Portfolio created by">Portfolio créé par</span>
+        <a href="#" class="link">Nollan Droguet</a>.
       </p>
     </div>
   </footer>
 
-  <a href="#top" class="back-to-top" title="Back to Top">
+  <a href="#top" class="back-to-top" title="Back to Top" aria-label="Retour en haut">
     <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
   </a>
+
   <script src="./index.js"></script>
 </body>
-
 </html>
