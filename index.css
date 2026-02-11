@@ -38,7 +38,7 @@
   --navy:       #0a1628;
   --navy-mid:   #0f1f38;
 
-  /* Accent discret (si tu veux garder un “petit rouge” sur certains highlights) */
+  /* Accent discret (si tu veux garder un "petit rouge" sur certains highlights) */
   --red:        #E2001A;
 
   /* Thème principal */
@@ -961,7 +961,10 @@ body:not(.user-is-tabbing) a:focus { box-shadow: none; }
 .veille__link { color: var(--gold-light); text-decoration: underline; transition: color .25s ease; }
 .veille__link:hover { color: var(--white); }
 
-/* Carte veille IA */
+/* ====================================== */
+/* CARTE VEILLE IA + BOUTONS (FIX)       */
+/* ====================================== */
+
 .veille-card {
   background: rgba(10,22,40,.68);
   border-radius: 16px;
@@ -1027,7 +1030,7 @@ body:not(.user-is-tabbing) a:focus { box-shadow: none; }
   text-align: left;
 }
 
-.veille-card__meta { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.4rem; }
+.veille-card__meta { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 2.8rem; }
 .veille-meta__tag {
   background: rgba(232,185,106,.08);
   color: var(--gold-light);
@@ -1038,11 +1041,101 @@ body:not(.user-is-tabbing) a:focus { box-shadow: none; }
   transition: all .25s ease;
   font-weight: 800;
 }
+.veille-card:hover .veille-meta__tag {
+  background: rgba(232,185,106,.12);
+  border-color: rgba(232,185,106,.26);
+}
 
+/* Container des boutons */
+.veille-card__actions {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+/* ---- BOUTONS VEILLE (FIX PRINCIPAL) ---- */
+.veille-btn {
+  /* Héritage du système .btn */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6rem;
+
+  padding: 1.1rem 2.6rem;
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-family: 'Jost', sans-serif;
+  font-weight: 700;
+  letter-spacing: .06em;
+  font-size: 1.45rem;
+
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  transition: transform .2s ease, box-shadow .2s ease, background .25s ease, border-color .25s ease, color .25s ease;
+  will-change: transform;
+  white-space: nowrap;
+}
+
+.veille-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(0,0,0,.32);
+}
+
+.veille-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Bouton "Voir en ligne" (primary gold) */
+.veille-btn--view {
+  background: linear-gradient(180deg, var(--gold-light), var(--gold));
+  color: #17120a;
+  border-color: rgba(255,255,255,.12);
+  box-shadow: 0 10px 22px rgba(200,146,42,.18);
+}
+
+.veille-btn--view:hover {
+  background: linear-gradient(180deg, #f2cf8b, var(--gold));
+  box-shadow: 0 14px 32px rgba(200,146,42,.26);
+}
+
+/* Bouton "Télécharger" (ghost transparent) */
+.veille-btn--download {
+  background: rgba(10,22,40,.30);
+  color: var(--white);
+  border-color: rgba(232,185,106,.35);
+  backdrop-filter: blur(8px);
+}
+
+.veille-btn--download:hover {
+  background: rgba(10,22,40,.50);
+  border-color: rgba(232,185,106,.55);
+  box-shadow: 0 12px 26px rgba(0,0,0,.35);
+}
+
+/* Mobile */
 @media (max-width: 900px) {
-  .veille-card { flex-direction: column; padding: 3rem; text-align: center; }
-  .veille-card__icon { font-size: 6rem; min-width: auto; margin: 0 auto; }
+  .veille-card { 
+    flex-direction: column; 
+    padding: 3rem; 
+    text-align: center; 
+  }
+  .veille-card__icon { 
+    font-size: 6rem; 
+    min-width: auto; 
+    margin: 0 auto; 
+  }
   .veille-card__meta { justify-content: center; }
+  .veille-card__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .veille-btn {
+    width: 100%;
+    justify-content: center;
+  }
   #veille p { text-align: left; font-size: 1.6rem; }
   #veille h3 { font-size: 2.4rem; }
   #veille h4 { font-size: 2rem; }
