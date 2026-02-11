@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
+
+  <title>
+    CV - Nollan Droguet | IT Student | Administration Systèmes & Réseaux
+  </title>
+
+  <meta name="description" content="Consultez le CV de Nollan Droguet, étudiant en BTS SIO SISR spécialisé en administration systèmes et réseaux.">
+  <meta name="keywords" content="Nollan Droguet, CV, BTS SIO, SISR, Administration Systèmes, Réseaux, Cybersécurité" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+  <!-- ***** Header ***** -->
+  <header role="banner">
+    <div class="row">
+      <nav class="nav" role="navigation" aria-label="Navigation principale">
+
+        <button class="nav__toggle" id="nav-toggle" aria-label="Ouvrir / fermer le menu">
+          <span></span><span></span><span></span>
+        </button>
+
+        <ul class="nav__items" id="nav-menu">
+          <li class="nav__item"><a href="index.html" class="nav__link" data-fr="Accueil" data-en="Home">Accueil</a></li>
+          <li class="nav__item"><a href="cv.html" class="nav__link nav__link--active" data-fr="CV" data-en="Resume">CV</a></li>
+          <li class="nav__item"><a href="experiences.html" class="nav__link" data-fr="Expériences" data-en="Experience">Expériences</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link" data-fr="Présentation" data-en="About">Présentation</a></li>
+          <li class="nav__item"><a href="veille.html" class="nav__link" data-fr="Veille" data-en="Tech Watch">Veille</a></li>
+          <li class="nav__item"><a href="stages.html" class="nav__link" data-fr="Stages" data-en="Internships">Stages</a></li>
+          <li class="nav__item"><a href="competences.html" class="nav__link" data-fr="Compétences" data-en="Skills">Compétences</a></li>
+          <li class="nav__item"><a href="contact.html" class="nav__link" data-fr="Contact" data-en="Contact">Contact</a></li>
+        </ul>
+
+        <!-- Bouton langue -->
+        <button class="lang-toggle" id="lang-toggle" aria-label="Change language">
+          <span class="lang-flag">🇫🇷</span>
+          <span class="lang-text">FR</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <!-- ***** CV Section ***** -->
+    <section class="cv-section" id="cv">
+      <div class="row">
+        <h2 data-fr="Mon CV" data-en="My Resume">Mon CV</h2>
+
+        <div class="cv-container">
+          <div class="cv-viewer">
+            <img src="./images/nollan_cv.png" alt="CV de Nollan Droguet" id="cv-image" class="cv-image">
+            <div class="cv-controls">
+              <button class="btn btn--ghost btn--sm" id="zoom-in" type="button" aria-label="Zoom avant">
+                <span>🔍+</span>
+              </button>
+              <button class="btn btn--ghost btn--sm" id="zoom-out" type="button" aria-label="Zoom arrière">
+                <span>🔍-</span>
+              </button>
+              <button class="btn btn--ghost btn--sm" id="reset-zoom" type="button" aria-label="Réinitialiser le zoom">
+                <span>↺</span>
+              </button>
+              <a href="./images/nollan_cv.png" download class="btn btn--primary btn--sm">
+                <span data-fr="⬇ Télécharger" data-en="⬇ Download">⬇ Télécharger</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ***** Footer ***** -->
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://twitter.com/NollanRZH/" title="Link to Twitter Profile">
+            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://github.com/NollanRZH/" title="Link to Github Profile">
+            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.linkedin.com/in/nollan-d-171812341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" title="Link to Linkedin Profile">
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
+          </a>
+        </li>
+      </ul>
+
+      <p>
+        &copy; 2026 - <span data-fr="Portfolio créé par" data-en="Portfolio created by">Portfolio créé par</span>
+        <a href="index.html" class="link">Nollan Droguet</a>.
+      </p>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" title="Back to Top" aria-label="Retour en haut">
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+
+  <script src="./index.js"></script>
+</body>
+</html>
