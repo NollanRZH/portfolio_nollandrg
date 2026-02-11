@@ -962,7 +962,7 @@ body:not(.user-is-tabbing) a:focus { box-shadow: none; }
 .veille__link:hover { color: var(--white); }
 
 /* ====================================== */
-/* CARTE VEILLE IA + BOUTONS (FIX)       */
+/* CARTE VEILLE IA                        */
 /* ====================================== */
 
 .veille-card {
