@@ -1229,3 +1229,59 @@ table tbody tr:hover td {
 .footer p { color: rgba(240,237,245,.38); font-size: 1.5rem; }
 .footer .link { color: var(--gold-light); }
 .footer .link:hover { color: var(--white); }
+
+/* ====================================== */
+/* MENTIONS LÉGALES - COMPACT          */
+/* ====================================== */
+
+#mentions .about__content {
+  display: block;
+  max-width: 800px;
+  text-align: left;
+}
+
+#mentions .about__text {
+  flex: none;
+  max-width: 100%;
+  text-align: left;
+}
+
+#mentions h3 {
+  color: var(--gold-light);
+  font-size: 2.4rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(232,185,106,.12);
+  padding-bottom: .6rem;
+}
+
+#mentions p {
+  font-size: 1.6rem;
+  line-height: 1.65;
+  margin: 1rem 0;
+  color: rgba(240,237,245,.75);
+}
+
+#mentions .work__list {
+  margin: 1rem 0 1.5rem 1.5rem;
+  list-style: none;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+#mentions .work__list li {
+  margin-bottom: .7rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 1.55rem;
+  line-height: 1.6;
+}
+
+#mentions .work__list li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-size: 1.8rem;
+}
