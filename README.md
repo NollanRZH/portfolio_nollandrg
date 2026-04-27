@@ -1,4 +1,4 @@
-# Portfolio Nollan Droguet
+# Portfolio
 
 Portfolio personnel (BTS SIO SISR) orienté **Administration Systèmes & Réseaux**, **Support IT** et **Cybersécurité**.  
 Déployé via **GitHub Pages**.
@@ -9,7 +9,7 @@ Déployé via **GitHub Pages**.
 
 - **Site (GitHub Pages)** : *https://nollanrzh.github.io/portfolio_nollandrg/*
 - **Repo GitHub** : *https://github.com/NollanRZH/portfolio_nollandrg/tree/main*
-- **Contact** : `nollandroguetpro@gmail.com`
+
 
 ---
 
