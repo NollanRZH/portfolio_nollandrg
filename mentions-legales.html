@@ -3,24 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow">
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
+  <meta name="theme-color" content="#0a1628" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-  <title>Mentions Légales - Portfolio</title>
+  <title
+    data-fr="Mentions Légales — Nollan | Portfolio BTS SIO SISR"
+    data-en="Legal Notice — Nollan | BTS SIO SISR Portfolio"
+  >Mentions Légales — Nollan | Portfolio BTS SIO SISR</title>
 
-  <meta name="description" content="Mentions légales du portfolio de Nollan - Informations légales et RGPD.">
-  <meta name="robots" content="noindex, nofollow">
+  <meta
+    name="description"
+    content="Mentions légales du portfolio de Nollan — Informations légales, hébergement, propriété intellectuelle et RGPD."
+    data-fr="Mentions légales du portfolio de Nollan — Informations légales, hébergement, propriété intellectuelle et RGPD."
+    data-en="Legal notice of Nollan's portfolio — Legal information, hosting, intellectual property and GDPR."
+  />
+  <meta
+    name="keywords"
+    content="Nollan, Mentions légales, RGPD, Hébergement, GitHub Pages, Portfolio, Rennes"
+  />
   <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
+  <a
+    href="#main-content"
+    class="skip-link"
+    data-fr="Aller au contenu principal"
+    data-en="Skip to main content"
+  >Aller au contenu principal</a>
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
   <!-- ***** Header ***** -->
-  <header role="banner">
+  <header role="banner" id="top">
     <div class="row">
-      <nav class="nav" role="navigation" aria-label="Navigation principale">
-
-        <button class="nav__toggle" id="nav-toggle" aria-label="Ouvrir / fermer le menu">
+      <nav
+        class="nav"
+        role="navigation"
+        aria-label="Navigation principale"
+        data-fr-label="Navigation principale"
+        data-en-label="Main navigation"
+      >
+        <button
+          type="button"
+          class="nav__toggle"
+          id="nav-toggle"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+          data-fr-label="Ouvrir le menu"
+          data-en-label="Open menu"
+        >
           <span></span><span></span><span></span>
         </button>
 
@@ -32,106 +66,187 @@
           <li class="nav__item"><a href="veille.html" class="nav__link" data-fr="Veille" data-en="Tech Watch">Veille</a></li>
           <li class="nav__item"><a href="stages.html" class="nav__link" data-fr="Stages" data-en="Internships">Stages</a></li>
           <li class="nav__item"><a href="competences.html" class="nav__link" data-fr="Compétences" data-en="Skills">Compétences</a></li>
-          <li class="nav__item"><a href="ctf.html" class="nav__link nav__link--active" data-fr="CTF" data-en="CTF">CTF</a></li>
+          <li class="nav__item"><a href="ctf.html" class="nav__link" data-fr="CTF" data-en="CTF">CTF</a></li>
           <li class="nav__item"><a href="contact.html" class="nav__link" data-fr="Contact" data-en="Contact">Contact</a></li>
         </ul>
 
         <!-- Bouton langue -->
-        <button class="lang-toggle" id="lang-toggle" aria-label="Change language">
-          <span class="lang-flag">🇫🇷</span>
+        <button
+          type="button"
+          class="lang-toggle"
+          id="lang-toggle"
+          aria-label="Changer la langue en anglais"
+          data-fr-label="Changer la langue en anglais"
+          data-en-label="Switch language to French"
+        >
+          <span class="lang-flag" aria-hidden="true">🇫🇷</span>
           <span class="lang-text">FR</span>
         </button>
       </nav>
     </div>
   </header>
 
-  <main role="main">
-
+  <main id="main-content" role="main">
     <!-- ***** Mentions Légales ***** -->
     <section class="about" id="mentions">
       <div class="row">
         <h2 data-fr="Mentions Légales" data-en="Legal Notice">Mentions Légales</h2>
+
+        <div class="hero__meta" style="margin-bottom: 3.5rem;">
+          <a href="#editeur" class="hero__pill" data-fr="1. Éditeur" data-en="1. Publisher">1. Éditeur</a>
+          <a href="#hebergement" class="hero__pill" data-fr="2. Hébergement" data-en="2. Hosting">2. Hébergement</a>
+          <a href="#propriete" class="hero__pill" data-fr="3. Propriété" data-en="3. Intellectual Property">3. Propriété</a>
+          <a href="#rgpd" class="hero__pill" data-fr="4. RGPD" data-en="4. GDPR">4. RGPD</a>
+          <a href="#cookies" class="hero__pill" data-fr="5. Cookies" data-en="5. Cookies">5. Cookies</a>
+        </div>
+
         <div class="about__content">
           <div class="about__text">
-
-            <h3 data-fr="1. Éditeur du site" data-en="1. Site Publisher">1. Éditeur du site</h3>
-            <p data-fr="Le présent site web est édité par Nollan, étudiant en BTS SIO SISR à Rennes, France." 
-               data-en="This website is published by Nollan, student in BTS SIO SISR in Rennes, France.">
-              Le présent site web est édité par <strong>Nollan</strong>, étudiant en BTS SIO SISR à Rennes, France.
+            <h3 id="editeur" data-fr="1. Éditeur du site" data-en="1. Site Publisher">1. Éditeur du site</h3>
+            <p>
+              <span data-fr="Le présent site web est édité par " data-en="This website is published by ">Le présent site web est édité par </span>
+              <strong>Nollan</strong><span
+                data-fr=", étudiant en BTS SIO SISR à Rennes, France."
+                data-en=", student in BTS SIO SISR in Rennes, France."
+              >, étudiant en BTS SIO SISR à Rennes, France.</span>
             </p>
             <ul class="work__list">
-              <li><strong data-fr="Nom :" data-en="Name:">Nom :</strong> Nollan</li>
-              <li><strong data-fr="Email :" data-en="Email:">Email :</strong> <a href="mailto:contact.nollan@gmail.com" class="veille__link">contact.nollan@gmail.com</a></li>
-              <li><strong data-fr="Localisation :" data-en="Location:">Localisation :</strong> Bretagne, France</li>
+              <li>
+                <strong data-fr="Nom :" data-en="Name:">Nom :</strong>
+                <span> Nollan</span>
+              </li>
+              <li>
+                <strong data-fr="Email :" data-en="Email:">Email :</strong>
+                <span> </span>
+                <a href="mailto:contact.nollan@gmail.com" class="veille__link">contact.nollan@gmail.com</a>
+              </li>
+              <li>
+                <strong data-fr="Localisation :" data-en="Location:">Localisation :</strong>
+                <span data-fr=" Bretagne, France" data-en=" Brittany, France"> Bretagne, France</span>
+              </li>
             </ul>
 
-            <h3 data-fr="2. Hébergement" data-en="2. Hosting">2. Hébergement</h3>
-            <p data-fr="Le site est hébergé par GitHub Pages, un service fourni par GitHub, Inc." 
-               data-en="The site is hosted by GitHub Pages, a service provided by GitHub, Inc.">
-              Le site est hébergé par <strong>GitHub Pages</strong>, un service fourni par GitHub, Inc.
+            <h3 id="hebergement" data-fr="2. Hébergement" data-en="2. Hosting">2. Hébergement</h3>
+            <p>
+              <span data-fr="Le site est hébergé par " data-en="The site is hosted by ">Le site est hébergé par </span>
+              <strong>GitHub Pages</strong><span
+                data-fr=", un service fourni par GitHub, Inc."
+                data-en=", a service provided by GitHub, Inc."
+              >, un service fourni par GitHub, Inc.</span>
             </p>
             <ul class="work__list">
-              <li><strong data-fr="Hébergeur :" data-en="Host:">Hébergeur :</strong> GitHub, Inc.</li>
-              <li><strong data-fr="Adresse :" data-en="Address:">Adresse :</strong> 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA</li>
-              <li><strong data-fr="Site web :" data-en="Website:">Site web :</strong> <a href="https://pages.github.com" target="_blank" class="veille__link">https://pages.github.com</a></li>
+              <li>
+                <strong data-fr="Hébergeur :" data-en="Host:">Hébergeur :</strong>
+                <span> GitHub, Inc.</span>
+              </li>
+              <li>
+                <strong data-fr="Adresse :" data-en="Address:">Adresse :</strong>
+                <span> 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA</span>
+              </li>
+              <li>
+                <strong data-fr="Site web :" data-en="Website:">Site web :</strong>
+                <span> </span>
+                <a
+                  href="https://pages.github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="veille__link"
+                >https://pages.github.com</a>
+              </li>
             </ul>
 
-            <h3 data-fr="3. Propriété intellectuelle" data-en="3. Intellectual Property">3. Propriété intellectuelle</h3>
-            <p data-fr="L'ensemble du contenu de ce site (textes, images, code source, design) est la propriété exclusive de Nollan, sauf mention contraire. Toute reproduction, même partielle, est interdite sans autorisation préalable." 
-               data-en="All content on this site (texts, images, source code, design) is the exclusive property of Nollan, unless otherwise stated. Any reproduction, even partial, is prohibited without prior authorization.">
-              L'ensemble du contenu de ce site (textes, images, code source, design) est la propriété exclusive de <strong>Nollan</strong>, sauf mention contraire. 
-              Toute reproduction, même partielle, est interdite sans autorisation préalable.
+            <h3 id="propriete" data-fr="3. Propriété intellectuelle" data-en="3. Intellectual Property">3. Propriété intellectuelle</h3>
+            <p>
+              <span
+                data-fr="L'ensemble du contenu de ce site (textes, images, code source, design) est la propriété exclusive de "
+                data-en="All content on this site (texts, images, source code, design) is the exclusive property of "
+              >L'ensemble du contenu de ce site (textes, images, code source, design) est la propriété exclusive de </span>
+              <strong>Nollan</strong><span
+                data-fr=", sauf mention contraire. Toute reproduction, même partielle, est interdite sans autorisation préalable."
+                data-en=", unless otherwise stated. Any reproduction, even partial, is prohibited without prior authorization."
+              >, sauf mention contraire. Toute reproduction, même partielle, est interdite sans autorisation préalable.</span>
             </p>
 
-            <h3 data-fr="4. Données personnelles (RGPD)" data-en="4. Personal Data (GDPR)">4. Données personnelles (RGPD)</h3>
-            <p data-fr="Ce site ne collecte aucune donnée personnelle. Aucun cookie n'est utilisé pour tracker les visiteurs. Les informations de contact affichées (email, réseaux sociaux) sont publiques et ne constituent pas une collecte de données." 
-               data-en="This site does not collect any personal data. No cookies are used to track visitors. The contact information displayed (email, social networks) is public and does not constitute data collection.">
-              Ce site <strong>ne collecte aucune donnée personnelle</strong>. Aucun cookie n'est utilisé pour tracker les visiteurs. 
-              Les informations de contact affichées (email, réseaux sociaux) sont publiques et ne constituent pas une collecte de données.
+            <h3 id="rgpd" data-fr="4. Données personnelles (RGPD)" data-en="4. Personal Data (GDPR)">4. Données personnelles (RGPD)</h3>
+            <p>
+              <span data-fr="Ce site " data-en="This site ">Ce site </span>
+              <strong
+                data-fr="ne collecte aucune donnée personnelle"
+                data-en="does not collect any personal data"
+              >ne collecte aucune donnée personnelle</strong><span
+                data-fr=". Aucun cookie n'est utilisé pour tracker les visiteurs. Les informations de contact affichées (email, réseaux sociaux) sont publiques et ne constituent pas une collecte de données."
+                data-en=". No cookies are used to track visitors. The contact information displayed (email, social networks) is public and does not constitute data collection."
+              >. Aucun cookie n'est utilisé pour tracker les visiteurs. Les informations de contact affichées (email, réseaux sociaux) sont publiques et ne constituent pas une collecte de données.</span>
             </p>
-            <p data-fr="Conformément au RGPD (Règlement Général sur la Protection des Données), vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Pour exercer ces droits, contactez-moi à l'adresse email indiquée ci-dessus." 
-               data-en="In accordance with GDPR (General Data Protection Regulation), you have the right to access, rectify and delete your personal data. To exercise these rights, contact me at the email address indicated above.">
-              Conformément au <strong>RGPD</strong> (Règlement Général sur la Protection des Données), vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. 
-              Pour exercer ces droits, contactez-moi à l'adresse email indiquée ci-dessus.
+            <p>
+              <span data-fr="Conformément au " data-en="In accordance with ">Conformément au </span>
+              <strong data-fr="RGPD" data-en="GDPR">RGPD</strong>
+              <span
+                data-fr=" (Règlement Général sur la Protection des Données), vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Pour exercer ces droits, contactez-moi à l'adresse email indiquée ci-dessus."
+                data-en=" (General Data Protection Regulation), you have the right to access, rectify and delete your personal data. To exercise these rights, contact me at the email address indicated above."
+              > (Règlement Général sur la Protection des Données), vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles. Pour exercer ces droits, contactez-moi à l'adresse email indiquée ci-dessus.</span>
             </p>
 
-            <h3 data-fr="5. Cookies" data-en="5. Cookies">5. Cookies</h3>
-            <p data-fr="Ce site utilise uniquement localStorage pour sauvegarder la préférence de langue (FR/EN). Aucune donnée personnelle n'est transmise à des tiers." 
-               data-en="This site only uses localStorage to save the language preference (FR/EN). No personal data is transmitted to third parties.">
-              Ce site utilise uniquement <strong>localStorage</strong> pour sauvegarder la préférence de langue (FR/EN). 
-              Aucune donnée personnelle n'est transmise à des tiers.
+            <h3 id="cookies" data-fr="5. Cookies" data-en="5. Cookies">5. Cookies</h3>
+            <p>
+              <span data-fr="Ce site utilise uniquement " data-en="This site only uses ">Ce site utilise uniquement </span>
+              <strong>localStorage</strong>
+              <span
+                data-fr=" pour sauvegarder la préférence de langue (FR/EN). Aucune donnée personnelle n'est transmise à des tiers."
+                data-en=" to save the language preference (FR/EN). No personal data is transmitted to third parties."
+              > pour sauvegarder la préférence de langue (FR/EN). Aucune donnée personnelle n'est transmise à des tiers.</span>
             </p>
 
             <h3 data-fr="6. Responsabilité" data-en="6. Liability">6. Responsabilité</h3>
-            <p data-fr="Les informations présentes sur ce site sont fournies à titre informatif. Nollan ne peut être tenu responsable des erreurs, omissions ou résultats obtenus à partir de l'utilisation de ces informations." 
-               data-en="The information on this site is provided for informational purposes. Nollan cannot be held responsible for errors, omissions or results obtained from the use of this information.">
-              Les informations présentes sur ce site sont fournies à titre informatif. 
-              <strong>Nollan</strong> ne peut être tenu responsable des erreurs, omissions ou résultats obtenus à partir de l'utilisation de ces informations.
+            <p>
+              <span
+                data-fr="Les informations présentes sur ce site sont fournies à titre informatif. "
+                data-en="The information on this site is provided for informational purposes. "
+              >Les informations présentes sur ce site sont fournies à titre informatif. </span>
+              <strong>Nollan</strong>
+              <span
+                data-fr=" ne peut être tenu responsable des erreurs, omissions ou résultats obtenus à partir de l'utilisation de ces informations."
+                data-en=" cannot be held responsible for errors, omissions or results obtained from the use of this information."
+              > ne peut être tenu responsable des erreurs, omissions ou résultats obtenus à partir de l'utilisation de ces informations.</span>
             </p>
 
             <h3 data-fr="7. Liens externes" data-en="7. External Links">7. Liens externes</h3>
-            <p data-fr="Ce site contient des liens vers des sites externes (GitHub, Twitter, LinkedIn, etc.). Nollan n'est pas responsable du contenu de ces sites tiers." 
-               data-en="This site contains links to external sites (GitHub, Twitter, LinkedIn, etc.). Nollan is not responsible for the content of these third-party sites.">
-              Ce site contient des liens vers des sites externes (GitHub, Twitter, LinkedIn, etc.). 
-              <strong>Nollan</strong> n'est pas responsable du contenu de ces sites tiers.
+            <p>
+              <span
+                data-fr="Ce site contient des liens vers des sites externes (GitHub, Twitter, LinkedIn, etc.). "
+                data-en="This site contains links to external sites (GitHub, Twitter, LinkedIn, etc.). "
+              >Ce site contient des liens vers des sites externes (GitHub, Twitter, LinkedIn, etc.). </span>
+              <strong>Nollan</strong>
+              <span
+                data-fr=" n'est pas responsable du contenu de ces sites tiers."
+                data-en=" is not responsible for the content of these third-party sites."
+              > n'est pas responsable du contenu de ces sites tiers.</span>
             </p>
 
             <h3 data-fr="8. Droit applicable" data-en="8. Applicable Law">8. Droit applicable</h3>
-            <p data-fr="Les présentes mentions légales sont soumises au droit français. Tout litige relatif à l'utilisation de ce site relève de la compétence exclusive des tribunaux français." 
-               data-en="These legal notices are subject to French law. Any dispute relating to the use of this site falls under the exclusive jurisdiction of French courts.">
-              Les présentes mentions légales sont soumises au <strong>droit français</strong>. 
-              Tout litige relatif à l'utilisation de ce site relève de la compétence exclusive des tribunaux français.
+            <p>
+              <span
+                data-fr="Les présentes mentions légales sont soumises au "
+                data-en="These legal notices are subject to "
+              >Les présentes mentions légales sont soumises au </span>
+              <strong data-fr="droit français" data-en="French law">droit français</strong><span
+                data-fr=". Tout litige relatif à l'utilisation de ce site relève de la compétence exclusive des tribunaux français."
+                data-en=". Any dispute relating to the use of this site falls under the exclusive jurisdiction of French courts."
+              >. Tout litige relatif à l'utilisation de ce site relève de la compétence exclusive des tribunaux français.</span>
             </p>
 
-            <p style="margin-top: 4rem; font-style: italic; color: rgba(240,237,245,.5);" data-fr="Dernière mise à jour : Avril 2026" data-en="Last updated: April 2026">
-              Dernière mise à jour : 28 Avril 2026
+            <p
+              class="veille__note"
+              style="margin-top: 3.5rem;"
+              data-fr="Dernière mise à jour : 23 Novembre 2026"
+              data-en="Last updated: November 23, 2026"
+            >
+              Dernière mise à jour : 23 Novembre 2026
             </p>
-
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- ***** Footer ***** -->
@@ -139,34 +254,66 @@
     <div class="row">
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://twitter.com/NollanRZH/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+          <a
+            href="https://twitter.com/NollanRZH/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profil Twitter de Nollan"
+            aria-label="Twitter"
+          >
+            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter" />
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://github.com/NollanRZH/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          <a
+            href="https://github.com/NollanRZH/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profil GitHub de Nollan"
+            aria-label="GitHub"
+          >
+            <img src="./images/github.svg" class="footer__social-image" alt="GitHub" />
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/nollan-d-171812341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" title="Link to Linkedin Profile">
-            <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
+          <a
+            href="https://www.linkedin.com/in/nollan-d-171812341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profil LinkedIn de Nollan"
+            aria-label="LinkedIn"
+          >
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn" />
           </a>
         </li>
       </ul>
 
       <p>
-        &copy; 2026 - <span data-fr="Portfolio créé par" data-en="Portfolio created by">Portfolio créé par</span>
-        <a href="index.html" class="link">Nollan</a> · 
-        <a href="mentions-legales.html" class="link" data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</a>
+        &copy; 2026 -
+        <span data-fr="Portfolio créé par" data-en="Portfolio created by">Portfolio créé par</span>
+        <a href="index.html" class="link">Nollan</a> ·
+        <a
+          href="mentions-legales.html"
+          class="link"
+          aria-current="page"
+          data-fr="Mentions légales"
+          data-en="Legal Notice"
+        >Mentions légales</a>
       </p>
     </div>
   </footer>
 
-  <a href="#top" class="back-to-top" title="Back to Top" aria-label="Retour en haut">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  <a
+    href="#top"
+    class="back-to-top"
+    title="Retour en haut"
+    aria-label="Retour en haut"
+    data-fr-label="Retour en haut"
+    data-en-label="Back to Top"
+  >
+    <img src="./images/arrow-up.svg" alt="" aria-hidden="true" class="back-to-top__image" />
   </a>
 
-  <script src="./index.js"></script>
+  <script src="./index.js" defer></script>
 </body>
 </html>

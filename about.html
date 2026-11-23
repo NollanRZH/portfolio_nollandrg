@@ -3,26 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow">
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
+  <meta name="theme-color" content="#0a1628" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-  <title>
-    Présentation -BTS SIO SISR | Rennes
-  </title>
+  <title
+    data-fr="Présentation — Nollan | BTS SIO SISR | Rennes"
+    data-en="About — Nollan | BTS SIO SISR | Rennes"
+  >Présentation — Nollan | BTS SIO SISR | Rennes</title>
 
-  <meta name="description" content="Présentation de Nollan, étudiant en BTS SIO SISR passionné par la cybersécurité, l'administration systèmes et les CTF.">
-  <meta name="keywords" content="Nollan, Présentation, BTS SIO, SISR, Cybersécurité, CTF, Stade Rennais" />
+  <meta
+    name="description"
+    content="Présentation de Nollan, étudiant en BTS SIO SISR à Rennes passionné par la cybersécurité, l'administration systèmes et les CTF."
+    data-fr="Présentation de Nollan, étudiant en BTS SIO SISR à Rennes passionné par la cybersécurité, l'administration systèmes et les CTF."
+    data-en="About Nollan, BTS SIO SISR student in Rennes passionate about cybersecurity, systems administration and CTFs."
+  />
+  <meta
+    name="keywords"
+    content="Nollan, Présentation, BTS SIO, SISR, Cybersécurité, CTF, Stade Rennais, Rennes"
+  />
   <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
+  <a
+    href="#main-content"
+    class="skip-link"
+    data-fr="Aller au contenu principal"
+    data-en="Skip to main content"
+  >Aller au contenu principal</a>
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
   <!-- ***** Header ***** -->
-  <header role="banner">
+  <header role="banner" id="top">
     <div class="row">
-      <nav class="nav" role="navigation" aria-label="Navigation principale">
-
-        <button class="nav__toggle" id="nav-toggle" aria-label="Ouvrir / fermer le menu">
+      <nav
+        class="nav"
+        role="navigation"
+        aria-label="Navigation principale"
+        data-fr-label="Navigation principale"
+        data-en-label="Main navigation"
+      >
+        <button
+          type="button"
+          class="nav__toggle"
+          id="nav-toggle"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+          data-fr-label="Ouvrir le menu"
+          data-en-label="Open menu"
+        >
           <span></span><span></span><span></span>
         </button>
 
@@ -30,7 +62,7 @@
           <li class="nav__item"><a href="index.html" class="nav__link" data-fr="Accueil" data-en="Home">Accueil</a></li>
           <li class="nav__item"><a href="cv.html" class="nav__link" data-fr="CV" data-en="Resume">CV</a></li>
           <li class="nav__item"><a href="experiences.html" class="nav__link" data-fr="Expériences" data-en="Experience">Expériences</a></li>
-          <li class="nav__item"><a href="about.html" class="nav__link nav__link--active" data-fr="Présentation" data-en="About">Présentation</a></li>
+          <li class="nav__item"><a href="about.html" class="nav__link nav__link--active" aria-current="page" data-fr="Présentation" data-en="About">Présentation</a></li>
           <li class="nav__item"><a href="veille.html" class="nav__link" data-fr="Veille" data-en="Tech Watch">Veille</a></li>
           <li class="nav__item"><a href="stages.html" class="nav__link" data-fr="Stages" data-en="Internships">Stages</a></li>
           <li class="nav__item"><a href="competences.html" class="nav__link" data-fr="Compétences" data-en="Skills">Compétences</a></li>
@@ -39,38 +71,109 @@
         </ul>
 
         <!-- Bouton langue -->
-        <button class="lang-toggle" id="lang-toggle" aria-label="Change language">
-          <span class="lang-flag">🇫🇷</span>
+        <button
+          type="button"
+          class="lang-toggle"
+          id="lang-toggle"
+          aria-label="Changer la langue en anglais"
+          data-fr-label="Changer la langue en anglais"
+          data-en-label="Switch language to French"
+        >
+          <span class="lang-flag" aria-hidden="true">🇫🇷</span>
           <span class="lang-text">FR</span>
         </button>
       </nav>
     </div>
   </header>
 
-  <main role="main">
-
+  <main id="main-content" role="main">
     <!-- ***** About ***** -->
     <section class="about" id="about">
       <div class="row">
         <h2 data-fr="Présentation" data-en="About Me">Présentation</h2>
+
         <div class="about__content">
           <div class="about__text">
-            <p data-fr="Bonjour, je suis Nollan immense fan du Stade Rennais, sympathisant au sein du RCK1991, et étudiant en BTS SIO option SISR (2ᵉ année). Passionné par l'informatique et... la culture ultra, je m'intéresse particulièrement à l'administration systèmes et réseaux, au support IT et à la cybersécurité. Je pratique régulièrement des Capture The Flag (CTF) afin de développer mes compétences en sécurité informatique et en résolution de problèmes. Titulaire d'un Bac Professionnel Systèmes Numériques (option RISC), j'ai également effectué plusieurs stages au sein du service informatique de Carl Zeiss Vision France à Fougères, où j'ai participé à des missions de support, de maintenance et d'assistance aux utilisateurs."
-               data-en="Hello, I'm Nollan, a huge Stade Rennais fan, supporter of RCK1991, and a student in BTS SIO SISR option (2nd year). Passionate about IT and... ultra culture, I'm particularly interested in systems and network administration, IT support and cybersecurity. I regularly practice Capture The Flag (CTF) to develop my skills in computer security and problem solving. Holder of a Professional Baccalaureate in Digital Systems (RISC option), I have also completed several internships in the IT department of Carl Zeiss Vision France in Fougères, where I participated in support, maintenance and user assistance missions.">
-              Bonjour, je suis Nollan immense fan du Stade Rennais, sympathisant au sein du RCK1991, et étudiant en BTS SIO option SISR (2ᵉ année).
-              Passionné par l'informatique et... la culture ultra, je m'intéresse particulièrement à l'administration systèmes et réseaux, au support IT et à la cybersécurité.
-              Je pratique régulièrement des Capture The Flag (CTF) afin de développer mes compétences en sécurité informatique et en résolution de problèmes.
-              Titulaire d'un Bac Professionnel Systèmes Numériques (option RISC), j'ai également effectué plusieurs stages au sein du service informatique de Carl Zeiss Vision France à Fougères, où j'ai participé à des missions de support, de maintenance et d'assistance aux utilisateurs.
+            <p>
+              <span
+                data-fr="Bonjour, je suis "
+                data-en="Hello, I'm "
+              >Bonjour, je suis </span>
+              <strong>Nollan</strong><span
+                data-fr=", immense fan du Stade Rennais, sympathisant au sein du RCK1991, et étudiant en "
+                data-en=", a huge Stade Rennais fan, supporter of RCK1991, and a 2nd-year student in "
+              >, immense fan du Stade Rennais, sympathisant au sein du RCK1991, et étudiant en </span>
+              <strong
+                data-fr="BTS SIO option SISR (2ᵉ année)"
+                data-en="BTS SIO (SISR option)"
+              >BTS SIO option SISR (2ᵉ année)</strong>.
             </p>
+
+            <p>
+              <span
+                data-fr="Passionné par l'informatique et la culture ultra, je m'intéresse particulièrement à l'"
+                data-en="Passionate about IT and ultra culture, I'm particularly interested in "
+              >Passionné par l'informatique et la culture ultra, je m'intéresse particulièrement à l'</span>
+              <strong
+                data-fr="administration systèmes et réseaux, au support IT et à la cybersécurité"
+                data-en="systems and network administration, IT support and cybersecurity"
+              >administration systèmes et réseaux, au support IT et à la cybersécurité</strong>.
+              <span
+                data-fr=" Je pratique régulièrement des "
+                data-en=" I regularly practice "
+              > Je pratique régulièrement des </span>
+              <strong>Capture The Flag (CTF)</strong>
+              <span
+                data-fr=" afin de développer mes compétences en sécurité informatique et en résolution de problèmes."
+                data-en=" to develop my skills in computer security and problem solving."
+              > afin de développer mes compétences en sécurité informatique et en résolution de problèmes.</span>
+            </p>
+
+            <p>
+              <span
+                data-fr="Titulaire d'un "
+                data-en="Holder of a "
+              >Titulaire d'un </span>
+              <strong
+                data-fr="Bac Professionnel Systèmes Numériques (option RISC)"
+                data-en="Professional Baccalaureate in Digital Systems (RISC option)"
+              >Bac Professionnel Systèmes Numériques (option RISC)</strong><span
+                data-fr=", j'ai également effectué plusieurs stages au sein du service informatique de "
+                data-en=", I have also completed several internships in the IT department of "
+              >, j'ai également effectué plusieurs stages au sein du service informatique de </span>
+              <strong>Carl Zeiss Vision France</strong>
+              <span
+                data-fr=" à Fougères, où j'ai participé à des missions de support, de maintenance et d'assistance aux utilisateurs."
+                data-en=" in Fougères, where I participated in support, maintenance and user assistance missions."
+              > à Fougères, où j'ai participé à des missions de support, de maintenance et d'assistance aux utilisateurs.</span>
+            </p>
+
+            <div class="hero__meta" style="margin: 2.8rem 0 3.2rem;">
+              <span class="hero__pill" data-fr="BTS SIO SISR" data-en="BTS SIO SISR">BTS SIO SISR</span>
+              <span class="hero__pill" data-fr="Bac Pro SN RISC" data-en="Bac Pro SN RISC">Bac Pro SN RISC</span>
+              <span class="hero__pill" data-fr="CTF &amp; Cybersécurité" data-en="CTF &amp; Cybersecurity">CTF &amp; Cybersécurité</span>
+              <span class="hero__pill" data-fr="Rennes • RCK1991" data-en="Rennes • RCK1991">Rennes • RCK1991</span>
+            </div>
+
+            <div class="welcome__links">
+              <a href="cv.html" class="btn btn--primary" data-fr="Consulter mon CV" data-en="View my Resume">Consulter mon CV</a>
+              <a href="stages.html" class="btn btn--ghost" data-fr="Mes stages chez ZEISS" data-en="My ZEISS Internships">Mes stages chez ZEISS</a>
+            </div>
           </div>
 
           <div class="about__photo-container">
-            <img class="about__photo" src="./images/nollan_roazhon.jpg" alt="Nollan" />
+            <img
+              class="about__photo"
+              src="./images/nollan_roazhon.jpg"
+              alt="Photo de Nollan à Rennes"
+              data-fr-alt="Photo de Nollan à Rennes"
+              data-en-alt="Photo of Nollan in Rennes"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- ***** Footer ***** -->
@@ -78,34 +181,60 @@
     <div class="row">
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://twitter.com/NollanRZH/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+          <a
+            href="https://twitter.com/NollanRZH/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profil Twitter de Nollan"
+            aria-label="Twitter"
+          >
+            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter" />
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://github.com/NollanRZH/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          <a
+            href="https://github.com/NollanRZH/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profil GitHub de Nollan"
+            aria-label="GitHub"
+          >
+            <img src="./images/github.svg" class="footer__social-image" alt="GitHub" />
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/nollan-d-171812341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" title="Link to Linkedin Profile">
-            <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
+          <a
+            href="https://www.linkedin.com/in/nollan-d-171812341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profil LinkedIn de Nollan"
+            aria-label="LinkedIn"
+          >
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn" />
           </a>
         </li>
       </ul>
 
-<p>
-  &copy; 2026 - <span data-fr="Portfolio créé par" data-en="Portfolio created by">Portfolio créé par</span>
-  <a href="index.html" class="link">Nollan</a> · 
-  <a href="mentions-legales.html" class="link" data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</a>
-</p>
+      <p>
+        &copy; 2026 -
+        <span data-fr="Portfolio créé par" data-en="Portfolio created by">Portfolio créé par</span>
+        <a href="index.html" class="link">Nollan</a> ·
+        <a href="mentions-legales.html" class="link" data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</a>
+      </p>
     </div>
   </footer>
 
-  <a href="#top" class="back-to-top" title="Back to Top" aria-label="Retour en haut">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  <a
+    href="#top"
+    class="back-to-top"
+    title="Retour en haut"
+    aria-label="Retour en haut"
+    data-fr-label="Retour en haut"
+    data-en-label="Back to Top"
+  >
+    <img src="./images/arrow-up.svg" alt="" aria-hidden="true" class="back-to-top__image" />
   </a>
 
-  <script src="./index.js"></script>
+  <script src="./index.js" defer></script>
 </body>
 </html>

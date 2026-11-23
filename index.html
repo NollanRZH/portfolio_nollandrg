@@ -3,31 +3,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow">
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
+  <meta name="theme-color" content="#0a1628" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-  <title>
-    Portfolio - Home
-  </title>
+  <title
+    data-fr="Nollan — Portfolio | BTS SIO SISR"
+    data-en="Nollan — Portfolio | BTS SIO SISR"
+  >Nollan — Portfolio | BTS SIO SISR</title>
 
-  <meta name="description" content="Portfolio de Nollan, étudiant en BTS SIO SISR passionné par l'administration systèmes et réseaux et la cybersécurité.">
-  <meta name="keywords" content="Nollan, BTS SIO, SISR, Administration Systèmes, Réseaux, Cybersécurité, Support IT" />
+  <meta
+    name="description"
+    content="Portfolio de Nollan, étudiant en BTS SIO SISR passionné par l'administration systèmes et réseaux et la cybersécurité à Rennes."
+    data-fr="Portfolio de Nollan, étudiant en BTS SIO SISR passionné par l'administration systèmes et réseaux et la cybersécurité à Rennes."
+    data-en="Portfolio of Nollan, BTS SIO SISR student passionate about systems and network administration and cybersecurity in Rennes."
+  />
+  <meta
+    name="keywords"
+    content="Nollan, BTS SIO, SISR, Administration Systèmes, Réseaux, Cybersécurité, Support IT, Rennes"
+  />
   <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
+  <a
+    href="#main-content"
+    class="skip-link"
+    data-fr="Aller au contenu principal"
+    data-en="Skip to main content"
+  >Aller au contenu principal</a>
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
   <!-- ***** Header ***** -->
   <header class="header" role="banner" id="top">
     <div class="row">
-      <nav class="nav" role="navigation" aria-label="Navigation principale">
-
-        <button class="nav__toggle" id="nav-toggle" aria-label="Ouvrir / fermer le menu">
+      <nav class="nav" role="navigation" aria-label="Navigation principale" data-fr-label="Navigation principale" data-en-label="Main navigation">
+        <button
+          type="button"
+          class="nav__toggle"
+          id="nav-toggle"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+          data-fr-label="Ouvrir le menu"
+          data-en-label="Open menu"
+        >
           <span></span><span></span><span></span>
         </button>
 
         <ul class="nav__items" id="nav-menu">
-          <li class="nav__item"><a href="index.html" class="nav__link nav__link--active" data-fr="Accueil" data-en="Home">Accueil</a></li>
+          <li class="nav__item"><a href="index.html" class="nav__link nav__link--active" aria-current="page" data-fr="Accueil" data-en="Home">Accueil</a></li>
           <li class="nav__item"><a href="cv.html" class="nav__link" data-fr="CV" data-en="Resume">CV</a></li>
           <li class="nav__item"><a href="experiences.html" class="nav__link" data-fr="Expériences" data-en="Experience">Expériences</a></li>
           <li class="nav__item"><a href="about.html" class="nav__link" data-fr="Présentation" data-en="About">Présentation</a></li>
@@ -39,30 +65,39 @@
         </ul>
 
         <!-- Bouton langue -->
-        <button class="lang-toggle" id="lang-toggle" aria-label="Change language">
-          <span class="lang-flag">🇫🇷</span>
+        <button
+          type="button"
+          class="lang-toggle"
+          id="lang-toggle"
+          aria-label="Changer la langue en anglais"
+          data-fr-label="Changer la langue en anglais"
+          data-en-label="Switch language to French"
+        >
+          <span class="lang-flag" aria-hidden="true">🇫🇷</span>
           <span class="lang-text">FR</span>
         </button>
       </nav>
     </div>
 
-    <!-- Hero (repositionné + "glass card") -->
+    <!-- Hero -->
     <div class="header__hero">
       <div class="row">
         <div class="hero__card">
-          <div class="hero__kicker" data-fr="Administration • Réseaux • Cybersécurité" data-en="Systems • Networks • Cybersecurity">
-            Administration • Réseaux • Cybersécurité
-          </div>
+          <div
+            class="hero__kicker"
+            data-fr="Administration • Réseaux • Cybersécurité"
+            data-en="Systems • Networks • Cybersecurity"
+          >Administration • Réseaux • Cybersécurité</div>
 
           <h1 class="heading-primary">
             <span>Nollan</span>
           </h1>
 
-          <p class="hero__subtitle"
-             data-fr="IT Student | Administration Systèmes & Réseaux | Rennes, France."
-             data-en="IT Student | Systems & Network Administration | Rennes, France.">
-            IT Student | Administration Systèmes & Réseaux | Rennes, France.
-          </p>
+          <p
+            class="hero__subtitle"
+            data-fr="Étudiant IT | Administration Systèmes &amp; Réseaux | Rennes, France."
+            data-en="IT Student | Systems &amp; Network Administration | Rennes, France."
+          >Étudiant IT | Administration Systèmes &amp; Réseaux | Rennes, France.</p>
 
           <div class="hero__actions">
             <a href="contact.html" class="btn btn--primary" data-fr="Me Contacter" data-en="Contact Me">Me Contacter</a>
@@ -70,19 +105,24 @@
           </div>
 
           <div class="hero__meta">
-            <span class="hero__pill">Rennes</span>
-            <span class="hero__pill">BTS SIO SISR</span>
-            <span class="hero__pill">CTF</span>
+            <span class="hero__pill" data-fr="Rennes" data-en="Rennes">Rennes</span>
+            <span class="hero__pill" data-fr="BTS SIO SISR" data-en="BTS SIO SISR">BTS SIO SISR</span>
+            <span class="hero__pill" data-fr="CTF" data-en="CTF">CTF</span>
           </div>
         </div>
       </div>
     </div>
 
-    <a class="scroll-indicator" href="#welcome" aria-label="Aller à la section suivante"></a>
+    <a
+      class="scroll-indicator"
+      href="#welcome"
+      aria-label="Aller à la section suivante"
+      data-fr-label="Aller à la section suivante"
+      data-en-label="Scroll to next section"
+    ></a>
   </header>
 
-  <main role="main">
-
+  <main id="main-content" role="main">
     <!-- ***** Welcome Section ***** -->
     <section class="welcome" id="welcome">
       <div class="row">
@@ -90,44 +130,65 @@
           <div class="welcome__animation">
             <div class="terminal">
               <div class="terminal__header">
-                <span class="terminal__dot terminal__dot--red"></span>
-                <span class="terminal__dot terminal__dot--yellow"></span>
-                <span class="terminal__dot terminal__dot--green"></span>
+                <span class="terminal__dot terminal__dot--red" aria-hidden="true"></span>
+                <span class="terminal__dot terminal__dot--yellow" aria-hidden="true"></span>
+                <span class="terminal__dot terminal__dot--green" aria-hidden="true"></span>
+                <span class="terminal__title">nollan@roazhon:~</span>
+                <button
+                  type="button"
+                  class="terminal__copy"
+                  id="terminal-copy"
+                  data-fr="Copier"
+                  data-en="Copy"
+                  data-copied-fr="Copié ✓"
+                  data-copied-en="Copied ✓"
+                >Copier</button>
               </div>
-              <div class="terminal__body">
+              <div class="terminal__body" id="terminal-output-box">
                 <p class="terminal__line">$ nollan@roazhon:~$ whoami</p>
                 <p class="terminal__line terminal__output">Nollan - BTS SIO SISR</p>
                 <p class="terminal__line">$ nollan@roazhon:~$ ls skills/</p>
-                <p class="terminal__line terminal__output" data-fr="Systèmes  Réseaux  Cybersécurité  Support-IT" data-en="Systems  Networks  Cybersecurity  IT-Support">Systèmes  Réseaux  Cybersécurité  Support-IT</p>
+                <p
+                  class="terminal__line terminal__output"
+                  data-fr="Systèmes  Réseaux  Cybersécurité  Support-IT"
+                  data-en="Systems  Networks  Cybersecurity  IT-Support"
+                >Systèmes  Réseaux  Cybersécurité  Support-IT</p>
                 <p class="terminal__line">$ nollan@roazhon:~$ cat passion.txt</p>
-                <p class="terminal__line terminal__output" data-fr="CTF | Administration | Stade Rennais 🔴⚫" data-en="CTF | Administration | Stade Rennais 🔴⚫">CTF | Administration | Stade Rennais 🔴⚫</p>
-                <p class="terminal__line terminal__cursor">█</p>
+                <p
+                  class="terminal__line terminal__output"
+                  data-fr="CTF | Administration | Stade Rennais 🔴⚫"
+                  data-en="CTF | Administration | Stade Rennais 🔴⚫"
+                >CTF | Administration | Stade Rennais 🔴⚫</p>
+                <p class="terminal__line terminal__cursor" aria-hidden="true">█</p>
               </div>
             </div>
           </div>
 
           <div class="welcome__text">
             <h2 data-fr="Bienvenue sur mon Portfolio !" data-en="Welcome to my Portfolio!">Bienvenue sur mon Portfolio !</h2>
-            <p data-fr="Découvrez mon parcours, mes compétences et mes projets en administration systèmes et réseaux. Passionné par la cybersécurité et les infrastructures IT, je suis actuellement en recherche d'opportunités pour mettre mes compétences au service de votre entreprise."
-               data-en="Discover my background, skills and projects in systems and network administration. Passionate about cybersecurity and IT infrastructure, I am currently looking for opportunities to put my skills to work for your company.">
-              Découvrez mon parcours, mes compétences et mes projets en administration systèmes et réseaux.
+            <p
+              data-fr="Découvrez mon parcours, mes compétences et mes projets en administration systèmes et réseaux. Passionné par la cybersécurité et les infrastructures IT, je suis actuellement en recherche d'opportunités pour mettre mes compétences au service de votre entreprise."
+              data-en="Discover my background, skills and projects in systems and network administration. Passionate about cybersecurity and IT infrastructure, I am currently looking for opportunities to put my skills to work for your company."
+            >Découvrez mon parcours, mes compétences et mes projets en administration systèmes et réseaux.
               Passionné par la cybersécurité et les infrastructures IT, je suis actuellement en recherche
-              d'opportunités pour mettre mes compétences au service de votre entreprise.
-            </p>
+              d'opportunités pour mettre mes compétences au service de votre entreprise.</p>
 
             <div class="welcome__links">
               <a href="cv.html" class="btn btn--primary" data-fr="Voir mon CV" data-en="View my Resume">Voir mon CV</a>
-              <a href="https://github.com/NollanRZH/" target="_blank" class="btn btn--ghost">
-                <img src="./images/github.svg" class="btn__icon" alt="GitHub">
-                GitHub
+              <a
+                href="https://github.com/NollanRZH/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn--ghost"
+              >
+                <img src="./images/github.svg" class="btn__icon" alt="" aria-hidden="true" />
+                <span>GitHub</span>
               </a>
             </div>
           </div>
-
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- ***** Footer ***** -->
@@ -135,34 +196,60 @@
     <div class="row">
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://twitter.com/NollanRZH/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+          <a
+            href="https://twitter.com/NollanRZH/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profil Twitter de Nollan"
+            aria-label="Twitter"
+          >
+            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter" />
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://github.com/NollanRZH/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          <a
+            href="https://github.com/NollanRZH/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profil GitHub de Nollan"
+            aria-label="GitHub"
+          >
+            <img src="./images/github.svg" class="footer__social-image" alt="GitHub" />
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/nollan-d-171812341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" title="Link to Linkedin Profile">
-            <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
+          <a
+            href="https://www.linkedin.com/in/nollan-d-171812341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profil LinkedIn de Nollan"
+            aria-label="LinkedIn"
+          >
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn" />
           </a>
         </li>
       </ul>
 
-<p>
-  &copy; 2026 - <span data-fr="Portfolio créé par" data-en="Portfolio created by">Portfolio créé par</span>
-  <a href="index.html" class="link">Nollan</a> · 
-  <a href="mentions-legales.html" class="link" data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</a>
-</p>
+      <p>
+        &copy; 2026 -
+        <span data-fr="Portfolio créé par" data-en="Portfolio created by">Portfolio créé par</span>
+        <a href="index.html" class="link">Nollan</a> ·
+        <a href="mentions-legales.html" class="link" data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</a>
+      </p>
     </div>
   </footer>
 
-  <a href="#top" class="back-to-top" title="Back to Top" aria-label="Retour en haut">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  <a
+    href="#top"
+    class="back-to-top"
+    title="Retour en haut"
+    aria-label="Retour en haut"
+    data-fr-label="Retour en haut"
+    data-en-label="Back to Top"
+  >
+    <img src="./images/arrow-up.svg" alt="" aria-hidden="true" class="back-to-top__image" />
   </a>
 
-  <script src="./index.js"></script>
+  <script src="./index.js" defer></script>
 </body>
 </html>

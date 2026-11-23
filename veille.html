@@ -3,26 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow">
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
+  <meta name="theme-color" content="#0a1628" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-  <title>
-    Veille Technologique
-  </title>
+  <title
+    data-fr="Veille Technologique — Nollan | Cybersécurité & Souveraineté"
+    data-en="Technology Watch — Nollan | Cybersecurity & Sovereignty"
+  >Veille Technologique — Nollan | Cybersécurité & Souveraineté</title>
 
-  <meta name="description" content="Veille technologique de Nollan sur la cybersécurité, l'intelligence économique et la souveraineté numérique : affaire Gemplus et IA.">
-  <meta name="keywords" content="Nollan, Veille Technologique, Cybersécurité, Intelligence Économique, Gemplus, IA" />
+  <meta
+    name="description"
+    content="Veille technologique de Nollan sur la cybersécurité, l'intelligence économique et la souveraineté numérique : affaire Gemplus et IA."
+    data-fr="Veille technologique de Nollan sur la cybersécurité, l'intelligence économique et la souveraineté numérique : affaire Gemplus et IA."
+    data-en="Nollan's technology watch on cybersecurity, economic intelligence and digital sovereignty: the Gemplus affair and AI."
+  />
+  <meta
+    name="keywords"
+    content="Nollan, Veille Technologique, Cybersécurité, Intelligence Économique, Gemplus, IA, Souveraineté Numérique"
+  />
   <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
+  <a
+    href="#main-content"
+    class="skip-link"
+    data-fr="Aller au contenu principal"
+    data-en="Skip to main content"
+  >Aller au contenu principal</a>
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
   <!-- ***** Header ***** -->
-  <header role="banner">
+  <header role="banner" id="top">
     <div class="row">
-      <nav class="nav" role="navigation" aria-label="Navigation principale">
-
-        <button class="nav__toggle" id="nav-toggle" aria-label="Ouvrir / fermer le menu">
+      <nav
+        class="nav"
+        role="navigation"
+        aria-label="Navigation principale"
+        data-fr-label="Navigation principale"
+        data-en-label="Main navigation"
+      >
+        <button
+          type="button"
+          class="nav__toggle"
+          id="nav-toggle"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+          data-fr-label="Ouvrir le menu"
+          data-en-label="Open menu"
+        >
           <span></span><span></span><span></span>
         </button>
 
@@ -31,7 +63,7 @@
           <li class="nav__item"><a href="cv.html" class="nav__link" data-fr="CV" data-en="Resume">CV</a></li>
           <li class="nav__item"><a href="experiences.html" class="nav__link" data-fr="Expériences" data-en="Experience">Expériences</a></li>
           <li class="nav__item"><a href="about.html" class="nav__link" data-fr="Présentation" data-en="About">Présentation</a></li>
-          <li class="nav__item"><a href="veille.html" class="nav__link nav__link--active" data-fr="Veille" data-en="Tech Watch">Veille</a></li>
+          <li class="nav__item"><a href="veille.html" class="nav__link nav__link--active" aria-current="page" data-fr="Veille" data-en="Tech Watch">Veille</a></li>
           <li class="nav__item"><a href="stages.html" class="nav__link" data-fr="Stages" data-en="Internships">Stages</a></li>
           <li class="nav__item"><a href="competences.html" class="nav__link" data-fr="Compétences" data-en="Skills">Compétences</a></li>
           <li class="nav__item"><a href="ctf.html" class="nav__link" data-fr="CTF" data-en="CTF">CTF</a></li>
@@ -39,62 +71,112 @@
         </ul>
 
         <!-- Bouton langue -->
-        <button class="lang-toggle" id="lang-toggle" aria-label="Change language">
-          <span class="lang-flag">🇫🇷</span>
+        <button
+          type="button"
+          class="lang-toggle"
+          id="lang-toggle"
+          aria-label="Changer la langue en anglais"
+          data-fr-label="Changer la langue en anglais"
+          data-en-label="Switch language to French"
+        >
+          <span class="lang-flag" aria-hidden="true">🇫🇷</span>
           <span class="lang-text">FR</span>
         </button>
       </nav>
     </div>
   </header>
 
-  <main role="main">
-
+  <main id="main-content" role="main">
     <!-- ***** Veille ***** -->
     <section class="about" id="veille">
       <div class="row">
-        <h2 data-fr="Veille Technologique & Intelligence Économique" data-en="Technology Watch & Economic Intelligence">Veille Technologique & Intelligence Économique</h2>
+        <h2
+          data-fr="Veille Technologique &amp; Intelligence Économique"
+          data-en="Technology Watch &amp; Economic Intelligence"
+        >Veille Technologique &amp; Intelligence Économique</h2>
+
+        <div class="hero__meta" style="justify-content: center; margin-bottom: 4rem;">
+          <a href="#gemplus-video" class="hero__pill" data-fr="📹 Vidéo &amp; Gemplus" data-en="📹 Video &amp; Gemplus">📹 Vidéo &amp; Gemplus</a>
+          <a href="#sources-veille" class="hero__pill" data-fr="📚 Sources" data-en="📚 Sources">📚 Sources</a>
+          <a href="#veille-ia" class="hero__pill" data-fr="🤖 Veille IA" data-en="🤖 AI Watch">🤖 Veille IA</a>
+        </div>
+
         <div class="about__content">
           <div class="about__text">
-            <p data-fr="Dans le cadre de ma formation et de ma passion pour l'informatique, j'effectue une veille technologique régulière sur les domaines de la cybersécurité, de l'intelligence économique et de la souveraineté numérique." 
-               data-en="As part of my training and passion for IT, I carry out regular technology watch in the fields of cybersecurity, economic intelligence and digital sovereignty.">
-              Dans le cadre de ma formation et de ma passion pour l'informatique, j'effectue une veille technologique régulière 
+            <p
+              data-fr="Dans le cadre de ma formation et de ma passion pour l'informatique, j'effectue une veille technologique régulière sur les domaines de la cybersécurité, de l'intelligence économique et de la souveraineté numérique."
+              data-en="As part of my training and passion for IT, I carry out regular technology watch in the fields of cybersecurity, economic intelligence and digital sovereignty."
+            >
+              Dans le cadre de ma formation et de ma passion pour l'informatique, j'effectue une veille technologique régulière
               sur les domaines de la cybersécurité, de l'intelligence économique et de la souveraineté numérique.
             </p>
 
             <!-- Vidéo Micode -->
-            <div class="veille__video-container">
-              <h3 data-fr="📹 Le Plus Grand Complot de la Tech Française - Micode" data-en="📹 The Biggest Conspiracy in French Tech - Micode">📹 Le Plus Grand Complot de la Tech Française - Micode</h3>
-              <p class="veille__video-intro" data-fr="Découvrez l'affaire Gemplus racontée par Micode, un cas d'école en espionnage économique et guerre technologique qui a bouleversé l'industrie française de la carte à puce." data-en="Discover the Gemplus affair told by Micode, a textbook case in economic espionage and technological warfare that shook the French smart card industry.">
+            <div class="veille__video-container" id="gemplus-video">
+              <h3
+                data-fr="📹 Le Plus Grand Complot de la Tech Française — Micode"
+                data-en="📹 The Biggest Conspiracy in French Tech — Micode"
+              >📹 Le Plus Grand Complot de la Tech Française — Micode</h3>
+              <p
+                class="veille__video-intro"
+                data-fr="Découvrez l'affaire Gemplus racontée par Micode, un cas d'école en espionnage économique et guerre technologique qui a bouleversé l'industrie française de la carte à puce."
+                data-en="Discover the Gemplus affair told by Micode, a textbook case in economic espionage and technological warfare that shook the French smart card industry."
+              >
                 Découvrez l'affaire Gemplus racontée par Micode, un cas d'école en espionnage économique et guerre technologique qui a bouleversé l'industrie française de la carte à puce.
               </p>
               <div class="veille__video-wrapper">
-                <video controls class="veille__video">
-                  <source src="./images/0201Gemplus_comp.mp4" type="video/mp4">
-                  <span data-fr="Votre navigateur ne supporte pas la balise vidéo." data-en="Your browser does not support the video tag.">Votre navigateur ne supporte pas la balise vidéo.</span>
+                <video controls preload="metadata" playsinline class="veille__video">
+                  <source src="./images/0201Gemplus_comp.mp4" type="video/mp4" />
+                  <span
+                    data-fr="Votre navigateur ne supporte pas la balise vidéo."
+                    data-en="Your browser does not support the video tag."
+                  >Votre navigateur ne supporte pas la balise vidéo.</span>
                 </video>
               </div>
               <p class="veille__video-caption">
-                <strong data-fr="Source :" data-en="Source:">Source :</strong> Micode - <span data-fr='"Le complot le plus grave de la tech française"' data-en='"The most serious conspiracy in French tech"'>"Le complot le plus grave de la tech française"</span> | 
-                <a href="https://www.youtube.com/@Micode" target="_blank" class="veille__link" data-fr="Chaîne YouTube de Micode" data-en="Micode's YouTube Channel">Chaîne YouTube de Micode</a>
+                <strong data-fr="Source :" data-en="Source:">Source :</strong>
+                <span> Micode — </span>
+                <span
+                  data-fr="« Le complot le plus grave de la tech française »"
+                  data-en="“The most serious conspiracy in French tech”"
+                >« Le complot le plus grave de la tech française »</span>
+                <span> | </span>
+                <a
+                  href="https://www.youtube.com/@Micode"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="veille__link"
+                  data-fr="Chaîne YouTube de Micode"
+                  data-en="Micode's YouTube Channel"
+                >Chaîne YouTube de Micode</a>
               </p>
             </div>
-            
-            <h3 data-fr="L'affaire Gemplus : Cas d'École en Espionnage Économique" data-en="The Gemplus Affair: A Case Study in Economic Espionage">L'affaire Gemplus : Cas d'École en Espionnage Économique</h3>
-            <p data-fr="L'affaire Gemplus illustre parfaitement les enjeux de souveraineté technologique et de guerre économique. Dans les années 1980-2000, Gemplus était le leader mondial de la carte à puce, technologie française révolutionnaire inventée par Roland Moreno. L'entreprise dominait les marchés des cartes SIM, bancaires et d'identité électronique." 
-               data-en="The Gemplus affair perfectly illustrates the issues of technological sovereignty and economic warfare. In the 1980s-2000s, Gemplus was the world leader in smart cards, a revolutionary French technology invented by Roland Moreno. The company dominated the SIM card, banking and electronic identity markets.">
-              L'affaire Gemplus illustre parfaitement les enjeux de souveraineté technologique et de guerre économique. 
-              Dans les années 1980-2000, Gemplus était le leader mondial de la carte à puce, technologie française révolutionnaire 
+
+            <h3
+              data-fr="L'affaire Gemplus : Cas d'École en Espionnage Économique"
+              data-en="The Gemplus Affair: A Case Study in Economic Espionage"
+            >L'affaire Gemplus : Cas d'École en Espionnage Économique</h3>
+            <p
+              data-fr="L'affaire Gemplus illustre parfaitement les enjeux de souveraineté technologique et de guerre économique. Dans les années 1980-2000, Gemplus était le leader mondial de la carte à puce, technologie française révolutionnaire inventée par Roland Moreno. L'entreprise dominait les marchés des cartes SIM, bancaires et d'identité électronique."
+              data-en="The Gemplus affair perfectly illustrates the issues of technological sovereignty and economic warfare. In the 1980s-2000s, Gemplus was the world leader in smart cards, a revolutionary French technology invented by Roland Moreno. The company dominated the SIM card, banking and electronic identity markets."
+            >
+              L'affaire Gemplus illustre parfaitement les enjeux de souveraineté technologique et de guerre économique.
+              Dans les années 1980-2000, Gemplus était le leader mondial de la carte à puce, technologie française révolutionnaire
               inventée par Roland Moreno. L'entreprise dominait les marchés des cartes SIM, bancaires et d'identité électronique.
             </p>
 
-            <p class="veille__note" data-fr="Note : La suite du contenu de veille est disponible uniquement en français pour des raisons de précision technique." data-en="Note: The rest of the watch content is available in French only for technical accuracy reasons.">
-              <em>Note : La suite du contenu de veille est disponible uniquement en français pour des raisons de précision technique.</em>
+            <p
+              class="veille__note"
+              data-fr="Note : La suite du contenu de veille est disponible uniquement en français pour des raisons de précision technique."
+              data-en="Note: The rest of the watch content is available in French only for technical accuracy reasons."
+            >
+              Note : La suite du contenu de veille est disponible uniquement en français pour des raisons de précision technique.
             </p>
 
             <h4>Chronologie d'une prise de contrôle stratégique</h4>
             <p>
-              Au tournant des années 2000, Gemplus entre au NASDAQ pour conquérir le marché américain. C'est le début d'une 
-              infiltration progressive : entrée de fonds d'investissement américains (notamment TPG), éviction de Marc Lassus 
+              Au tournant des années 2000, Gemplus entre au NASDAQ pour conquérir le marché américain. C'est le début d'une
+              infiltration progressive : entrée de fonds d'investissement américains (notamment TPG), éviction de Marc Lassus
               (le fondateur), changement de direction vers des profils anglo-saxons, et transfert du savoir-faire stratégique.
             </p>
 
@@ -114,12 +196,12 @@
             <ul class="work__list">
               <li><strong>Infiltration capitalistique</strong> : prise de contrôle via des fonds d'investissement liés aux services de renseignement</li>
               <li><strong>Déstabilisation managériale</strong> : campagnes de presse, conflits au CA, éviction des fondateurs</li>
-              <li><strong>Pillage technologique</strong> : transfert de brevets, délocalisation R&D, affaiblissement stratégique</li>
+              <li><strong>Pillage technologique</strong> : transfert de brevets, délocalisation R&amp;D, affaiblissement stratégique</li>
             </ul>
 
             <h4>Dimension géopolitique et cryptographie</h4>
             <p>
-              La carte à puce Gemplus intégrait des algorithmes de chiffrement RSA, une technologie considérée comme "duale" 
+              La carte à puce Gemplus intégrait des algorithmes de chiffrement RSA, une technologie considérée comme « duale »
               (usage civil et militaire). Le contrôle de cette technologie permettait :
             </p>
             <ul class="work__list">
@@ -129,7 +211,7 @@
               <li>Contrôle des standards de sécurité internationaux</li>
             </ul>
             <p>
-              Les révélations Snowden confirmeront plus tard que la NSA espionnait systématiquement les fabricants de cartes SIM 
+              Les révélations Snowden confirmeront plus tard que la NSA espionnait systématiquement les fabricants de cartes SIM
               et cherchait à compromettre les algorithmes de chiffrement des télécommunications.
             </p>
 
@@ -150,7 +232,7 @@
             </p>
             <ul class="work__list">
               <li><strong>IA générative</strong> : startups françaises (Mistral AI) courtisées par investisseurs US</li>
-              <li><strong>Technologies quantiques</strong> : Pasqal, Alice&Bob, Quandela</li>
+              <li><strong>Technologies quantiques</strong> : Pasqal, Alice&amp;Bob, Quandela</li>
               <li><strong>Cybersécurité</strong> : éditeurs de solutions cryptographiques critiques</li>
               <li><strong>Semi-conducteurs</strong> : STMicroelectronics, Soitec</li>
               <li><strong>Cloud souverain</strong> : OVHcloud face aux géants américains</li>
@@ -158,7 +240,7 @@
 
             <h4>Cryptographie et souveraineté numérique</h4>
             <p>
-              Le RSA (Rivest-Shamir-Adleman), algorithme de chiffrement asymétrique utilisé dans les cartes à puce Gemplus, 
+              Le RSA (Rivest-Shamir-Adleman), algorithme de chiffrement asymétrique utilisé dans les cartes à puce Gemplus,
               est au cœur des enjeux de souveraineté. Maîtriser cette technologie signifie :
             </p>
             <ul class="work__list">
@@ -170,26 +252,26 @@
 
             <h4>Rôle des services de renseignement</h4>
             <p>
-              L'affaire Gemplus démontre que les services de renseignement ne se limitent pas à l'antiterrorisme. 
+              L'affaire Gemplus démontre que les services de renseignement ne se limitent pas à l'antiterrorisme.
               Ils pratiquent activement :
             </p>
             <ul class="work__list">
               <li><strong>Espionnage économique</strong> : NSA, CIA (USA), DGSE (France)</li>
-              <li><strong>Influence sur les marchés</strong> : orientations vers des "champions nationaux"</li>
+              <li><strong>Influence sur les marchés</strong> : orientations vers des « champions nationaux »</li>
               <li><strong>Déstabilisation de concurrents</strong> : fuites opportunes, scandales médiatiques</li>
               <li><strong>Contrôle des technologies duales</strong> : cryptographie, IA, quantique</li>
             </ul>
 
             <h4>Méthodologie de veille stratégique</h4>
             <p>
-              Pour identifier les futures affaires "Gemplus", il faut surveiller :
+              Pour identifier les futures affaires « Gemplus », il faut surveiller :
             </p>
             <ul class="work__list">
               <li><strong>Niveau capitalistique</strong> : qui investit ? Liens avec États étrangers ? Clauses de contrôle cachées ?</li>
               <li><strong>Niveau gouvernance</strong> : nouveaux entrants au CA, parcours suspects, conflits d'intérêts</li>
-              <li><strong>Niveau technologique</strong> : localisation données/R&D, détention réelle des brevets</li>
+              <li><strong>Niveau technologique</strong> : localisation données/R&amp;D, détention réelle des brevets</li>
               <li><strong>Niveau géopolitique</strong> : dépendance aux infrastructures US, exposition au Cloud Act</li>
-              <li><strong>Signaux faibles</strong> : levées de fonds massives, changements managériaux, délocalisations R&D</li>
+              <li><strong>Signaux faibles</strong> : levées de fonds massives, changements managériaux, délocalisations R&amp;D</li>
             </ul>
 
             <h4>Outils de protection actuels</h4>
@@ -204,7 +286,7 @@
 
             <h4>Leçons pour la cybersécurité</h4>
             <p>
-              L'affaire Gemplus enseigne que la sécurité informatique ne se limite pas aux aspects techniques. 
+              L'affaire Gemplus enseigne que la sécurité informatique ne se limite pas aux aspects techniques.
               Elle englobe également :
             </p>
             <ul class="work__list">
@@ -215,36 +297,76 @@
               <li>La souveraineté des algorithmes cryptographiques</li>
             </ul>
 
-            <h3 data-fr="Sources & Ressources" data-en="Sources & Resources">Sources & Ressources</h3>
+            <h3 id="sources-veille" data-fr="Sources &amp; Ressources" data-en="Sources &amp; Resources">Sources &amp; Ressources</h3>
             <ul class="work__list">
-              <li><strong>Documentaire</strong> : "Le complot le plus grave de la tech française" - Micode (YouTube)</li>
-              <li><strong>Experts</strong> : Marc Lassus (fondateur Gemplus), Nicolas Moinet (intelligence économique)</li>
-              <li><strong>Institutions</strong> : ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information)</li>
-              <li><strong>Ouvrages</strong> : "Au cœur de l'espionnage économique" - Marc Lassus</li>
-              <li><strong>Révélations</strong> : Edward Snowden - NSA Files (espionnage cartes SIM, crypto)</li>
-              <li><strong>Presse spécialisée</strong> : Intelligence Online, Le Monde Diplomatique</li>
-              <li><strong>Think tanks</strong> : IHEDN (Institut des Hautes Études de Défense Nationale)</li>
-              <li><strong>Juridique</strong> : Cloud Act (2018), FISA Section 702, règlement EU screening FDI</li>
-              <li><strong>Technique</strong> : Standards cryptographiques (RSA, ECC), certifications Common Criteria</li>
-              <li><strong>Veille continue</strong> : Bleeping Computer, The Hacker News, CERT-FR, CVE databases</li>
+              <li>
+                <strong data-fr="Documentaire :" data-en="Documentary:">Documentaire :</strong>
+                <span> « Le complot le plus grave de la tech française » — Micode (YouTube)</span>
+              </li>
+              <li>
+                <strong data-fr="Experts :" data-en="Experts:">Experts :</strong>
+                <span> Marc Lassus (fondateur Gemplus), Nicolas Moinet (intelligence économique)</span>
+              </li>
+              <li>
+                <strong data-fr="Institutions :" data-en="Institutions:">Institutions :</strong>
+                <span> ANSSI (Agence Nationale de la Sécurité des Systèmes d'Information)</span>
+              </li>
+              <li>
+                <strong data-fr="Ouvrages :" data-en="Books:">Ouvrages :</strong>
+                <span> « Au cœur de l'espionnage économique » — Marc Lassus</span>
+              </li>
+              <li>
+                <strong data-fr="Révélations :" data-en="Revelations:">Révélations :</strong>
+                <span> Edward Snowden — NSA Files (espionnage cartes SIM, crypto)</span>
+              </li>
+              <li>
+                <strong data-fr="Presse spécialisée :" data-en="Specialized press:">Presse spécialisée :</strong>
+                <span> Intelligence Online, Le Monde Diplomatique</span>
+              </li>
+              <li>
+                <strong data-fr="Think tanks :" data-en="Think tanks:">Think tanks :</strong>
+                <span> IHEDN (Institut des Hautes Études de Défense Nationale)</span>
+              </li>
+              <li>
+                <strong data-fr="Juridique :" data-en="Legal:">Juridique :</strong>
+                <span> Cloud Act (2018), FISA Section 702, règlement EU screening FDI</span>
+              </li>
+              <li>
+                <strong data-fr="Technique :" data-en="Technical:">Technique :</strong>
+                <span> Standards cryptographiques (RSA, ECC), certifications Common Criteria</span>
+              </li>
+              <li>
+                <strong data-fr="Veille continue :" data-en="Ongoing watch:">Veille continue :</strong>
+                <span> Bleeping Computer, The Hacker News, CERT-FR, CVE databases</span>
+              </li>
             </ul>
 
-            <h3 data-fr="Conclusion : Une vigilance permanente" data-en="Conclusion: Constant Vigilance">Conclusion : Une vigilance permanente</h3>
-            <p data-fr="L'affaire Gemplus n'est pas de l'histoire ancienne, c'est un mode opératoire qui continue. Elle rappelle qu'en matière de souveraineté numérique et de cryptographie, la naïveté se paie cash. La veille technologique doit intégrer ces dimensions géopolitiques pour comprendre les vrais enjeux de la cybersécurité moderne." 
-               data-en="The Gemplus affair is not ancient history, it is an ongoing modus operandi. It reminds us that when it comes to digital sovereignty and cryptography, naivety comes at a price. Technology watch must integrate these geopolitical dimensions to understand the real issues of modern cybersecurity.">
-              L'affaire Gemplus n'est pas de l'histoire ancienne, c'est un mode opératoire qui continue. 
-              Elle rappelle qu'en matière de souveraineté numérique et de cryptographie, la naïveté se paie cash. 
-              La veille technologique doit intégrer ces dimensions géopolitiques pour comprendre les vrais enjeux 
+            <h3
+              data-fr="Conclusion : Une vigilance permanente"
+              data-en="Conclusion: Constant Vigilance"
+            >Conclusion : Une vigilance permanente</h3>
+            <p
+              data-fr="L'affaire Gemplus n'est pas de l'histoire ancienne, c'est un mode opératoire qui continue. Elle rappelle qu'en matière de souveraineté numérique et de cryptographie, la naïveté se paie cash. La veille technologique doit intégrer ces dimensions géopolitiques pour comprendre les vrais enjeux de la cybersécurité moderne."
+              data-en="The Gemplus affair is not ancient history, it is an ongoing modus operandi. It reminds us that when it comes to digital sovereignty and cryptography, naivety comes at a price. Technology watch must integrate these geopolitical dimensions to understand the real issues of modern cybersecurity."
+            >
+              L'affaire Gemplus n'est pas de l'histoire ancienne, c'est un mode opératoire qui continue.
+              Elle rappelle qu'en matière de souveraineté numérique et de cryptographie, la naïveté se paie cash.
+              La veille technologique doit intégrer ces dimensions géopolitiques pour comprendre les vrais enjeux
               de la cybersécurité moderne.
             </p>
 
-           
-            <!-- NOUVELLE VEILLE IA -->
-            <div class="veille-card veille-card--ai">
-              <div class="veille-card__icon">🤖</div>
+            <!-- VEILLE IA -->
+            <div class="veille-card veille-card--ai" id="veille-ia">
+              <div class="veille-card__icon" aria-hidden="true">🤖</div>
               <div class="veille-card__content">
-                <h3 data-fr="Veille Intelligence Artificielle : Technologique, Enjeux Géopolitiques, Économiques & Juridiques" data-en="Tech Watch Artificial Intelligence: Geopolitical, Economic & Legal Issues">Veille Technologique Intelligence Artificielle : Enjeux Géopolitiques, Économiques & Juridiques</h3>
-                <p data-fr="Plongez dans une analyse approfondie des bouleversements provoqués par l'IA générative. Cette veille explore la course mondiale à l'IA, les stratégies de souveraineté numérique, les implications juridiques du AI Act européen, et les défis éthiques de la régulation face aux géants technologiques américains et chinois." data-en="Dive into an in-depth analysis of the upheavals caused by generative AI. This watch explores the global AI race, digital sovereignty strategies, the legal implications of the European AI Act, and the ethical challenges of regulation in the face of American and Chinese tech giants.">
+                <h3
+                  data-fr="Veille Intelligence Artificielle : Technologique, Enjeux Géopolitiques, Économiques &amp; Juridiques"
+                  data-en="Tech Watch Artificial Intelligence: Geopolitical, Economic &amp; Legal Issues"
+                >Veille Technologique Intelligence Artificielle : Enjeux Géopolitiques, Économiques &amp; Juridiques</h3>
+                <p
+                  data-fr="Plongez dans une analyse approfondie des bouleversements provoqués par l'IA générative. Cette veille explore la course mondiale à l'IA, les stratégies de souveraineté numérique, les implications juridiques du AI Act européen, et les défis éthiques de la régulation face aux géants technologiques américains et chinois."
+                  data-en="Dive into an in-depth analysis of the upheavals caused by generative AI. This watch explores the global AI race, digital sovereignty strategies, the legal implications of the European AI Act, and the ethical challenges of regulation in the face of American and Chinese tech giants."
+                >
                   Plongez dans une analyse approfondie des bouleversements provoqués par l'IA générative. Cette veille explore la course mondiale à l'IA, les stratégies de souveraineté numérique, les implications juridiques du AI Act européen, et les défis éthiques de la régulation face aux géants technologiques américains et chinois.
                 </p>
                 <div class="veille-card__meta">
@@ -254,21 +376,28 @@
                   <span class="veille-meta__tag" data-fr="🔒 Souveraineté" data-en="🔒 Sovereignty">🔒 Souveraineté</span>
                 </div>
                 <div class="veille-card__actions">
-                  <a href="./images/veille_IA_nollan_drg.pdf" target="_blank" class="veille-btn veille-btn--view" data-fr="📖 Consulter en ligne" data-en="📖 View Online">
-                    📖 Consulter en ligne
-                  </a>
-                  <a href="./images/veille_IA_nollan_drg.pdf" download class="veille-btn veille-btn--download" data-fr="⬇️ Télécharger PDF" data-en="⬇️ Download PDF">
-                    ⬇️ Télécharger PDF
-                  </a>
+                  <a
+                    href="./images/veille_IA_nollan_drg.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="veille-btn veille-btn--view"
+                    data-fr="📖 Consulter en ligne"
+                    data-en="📖 View Online"
+                  >📖 Consulter en ligne</a>
+                  <a
+                    href="./images/veille_IA_nollan_drg.pdf"
+                    download
+                    class="veille-btn veille-btn--download"
+                    data-fr="⬇️ Télécharger PDF"
+                    data-en="⬇️ Download PDF"
+                  >⬇️ Télécharger PDF</a>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </section>
-
   </main>
 
   <!-- ***** Footer ***** -->
@@ -276,34 +405,60 @@
     <div class="row">
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://twitter.com/NollanRZH/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+          <a
+            href="https://twitter.com/NollanRZH/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profil Twitter de Nollan"
+            aria-label="Twitter"
+          >
+            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter" />
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://github.com/NollanRZH/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          <a
+            href="https://github.com/NollanRZH/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profil GitHub de Nollan"
+            aria-label="GitHub"
+          >
+            <img src="./images/github.svg" class="footer__social-image" alt="Github" />
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/nollan-d-171812341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" title="Link to Linkedin Profile">
-            <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
+          <a
+            href="https://www.linkedin.com/in/nollan-d-171812341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profil LinkedIn de Nollan"
+            aria-label="LinkedIn"
+          >
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin" />
           </a>
         </li>
       </ul>
 
-<p>
-  &copy; 2026 - <span data-fr="Portfolio créé par" data-en="Portfolio created by">Portfolio créé par</span>
-  <a href="index.html" class="link">Nollan</a> · 
-  <a href="mentions-legales.html" class="link" data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</a>
-</p>
+      <p>
+        &copy; 2026 -
+        <span data-fr="Portfolio créé par" data-en="Portfolio created by">Portfolio créé par</span>
+        <a href="index.html" class="link">Nollan</a> ·
+        <a href="mentions-legales.html" class="link" data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</a>
+      </p>
     </div>
   </footer>
 
-  <a href="#top" class="back-to-top" title="Back to Top" aria-label="Retour en haut">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  <a
+    href="#top"
+    class="back-to-top"
+    title="Retour en haut"
+    aria-label="Retour en haut"
+    data-fr-label="Retour en haut"
+    data-en-label="Back to Top"
+  >
+    <img src="./images/arrow-up.svg" alt="" aria-hidden="true" class="back-to-top__image" />
   </a>
 
-  <script src="./index.js"></script>
+  <script src="./index.js" defer></script>
 </body>
 </html>

@@ -3,26 +3,58 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow">
-  <link rel="shortcut icon" type="image/png" href="./images/favicon.png"/>
+  <meta name="theme-color" content="#0a1628" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
 
-  <title>
-    CTF - Capture The Flag | Cybersécurité
-  </title>
+  <title
+    data-fr="CTF — Nollan | Capture The Flag & Cybersécurité"
+    data-en="CTF — Nollan | Capture The Flag & Cybersecurity"
+  >CTF — Nollan | Capture The Flag & Cybersécurité</title>
 
-  <meta name="description" content="Profils CTF de Nollan  : RootMe, HackTheBox, TryHackMe. Challenges de cybersécurité et pratique offensive.">
-  <meta name="keywords" content="Nollan, CTF, Capture The Flag, RootMe, HackTheBox, Cybersécurité" />
+  <meta
+    name="description"
+    content="Profils CTF de Nollan : RootMe, HackTheBox, TryHackMe. Challenges de cybersécurité et pratique offensive."
+    data-fr="Profils CTF de Nollan : RootMe, HackTheBox, TryHackMe. Challenges de cybersécurité et pratique offensive."
+    data-en="Nollan's CTF profiles: RootMe, HackTheBox, TryHackMe. Cybersecurity challenges and offensive practice."
+  />
+  <meta
+    name="keywords"
+    content="Nollan, CTF, Capture The Flag, RootMe, HackTheBox, TryHackMe, Cybersécurité, unitx"
+  />
   <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
+  <a
+    href="#main-content"
+    class="skip-link"
+    data-fr="Aller au contenu principal"
+    data-en="Skip to main content"
+  >Aller au contenu principal</a>
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
   <!-- ***** Header ***** -->
-  <header role="banner">
+  <header role="banner" id="top">
     <div class="row">
-      <nav class="nav" role="navigation" aria-label="Navigation principale">
-
-        <button class="nav__toggle" id="nav-toggle" aria-label="Ouvrir / fermer le menu">
+      <nav
+        class="nav"
+        role="navigation"
+        aria-label="Navigation principale"
+        data-fr-label="Navigation principale"
+        data-en-label="Main navigation"
+      >
+        <button
+          type="button"
+          class="nav__toggle"
+          id="nav-toggle"
+          aria-controls="nav-menu"
+          aria-expanded="false"
+          aria-label="Ouvrir le menu"
+          data-fr-label="Ouvrir le menu"
+          data-en-label="Open menu"
+        >
           <span></span><span></span><span></span>
         </button>
 
@@ -34,41 +66,59 @@
           <li class="nav__item"><a href="veille.html" class="nav__link" data-fr="Veille" data-en="Tech Watch">Veille</a></li>
           <li class="nav__item"><a href="stages.html" class="nav__link" data-fr="Stages" data-en="Internships">Stages</a></li>
           <li class="nav__item"><a href="competences.html" class="nav__link" data-fr="Compétences" data-en="Skills">Compétences</a></li>
-          <li class="nav__item"><a href="ctf.html" class="nav__link nav__link--active" data-fr="CTF" data-en="CTF">CTF</a></li>
+          <li class="nav__item"><a href="ctf.html" class="nav__link nav__link--active" aria-current="page" data-fr="CTF" data-en="CTF">CTF</a></li>
           <li class="nav__item"><a href="contact.html" class="nav__link" data-fr="Contact" data-en="Contact">Contact</a></li>
         </ul>
 
         <!-- Bouton langue -->
-        <button class="lang-toggle" id="lang-toggle" aria-label="Change language">
-          <span class="lang-flag">🇫🇷</span>
+        <button
+          type="button"
+          class="lang-toggle"
+          id="lang-toggle"
+          aria-label="Changer la langue en anglais"
+          data-fr-label="Changer la langue en anglais"
+          data-en-label="Switch language to French"
+        >
+          <span class="lang-flag" aria-hidden="true">🇫🇷</span>
           <span class="lang-text">FR</span>
         </button>
       </nav>
     </div>
   </header>
 
-  <main role="main">
-
+  <main id="main-content" role="main">
     <!-- ***** CTF Section ***** -->
     <section class="client" id="ctf">
       <div class="row">
         <h2 data-fr="Capture The Flag (CTF)" data-en="Capture The Flag (CTF)">Capture The Flag (CTF)</h2>
-        <p class="client__intro" data-fr="Les CTF sont des défis de cybersécurité où je résous des challenges techniques pour développer mes compétences en hacking éthique et sécurité offensive." data-en="CTFs are cybersecurity challenges where I solve technical problems to develop my skills in ethical hacking and offensive security.">
+        <p
+          class="client__intro"
+          data-fr="Les CTF sont des défis de cybersécurité où je résous des challenges techniques pour développer mes compétences en hacking éthique et sécurité offensive."
+          data-en="CTFs are cybersecurity challenges where I solve technical problems to develop my skills in ethical hacking and offensive security."
+        >
           Les CTF sont des défis de cybersécurité où je résous des challenges techniques pour développer mes compétences en hacking éthique et sécurité offensive.
         </p>
 
-        <div class="client__grid">
+        <div class="hero__meta" style="justify-content: center; margin-bottom: 4.5rem;">
+          <span class="hero__pill" data-fr="Pseudo : unitx" data-en="Handle: unitx">Pseudo : unitx</span>
+          <span class="hero__pill" data-fr="Sécurité offensive" data-en="Offensive security">Sécurité offensive</span>
+          <span class="hero__pill" data-fr="Pratique continue" data-en="Ongoing practice">Pratique continue</span>
+        </div>
 
+        <div class="client__grid">
           <!-- RootMe (Disponible) -->
-          <div class="client__card">
+          <article class="client__card">
             <div class="client__logo-container">
-              <img src="./images/Root-Me.png" class="client__logo-large" alt="RootMe" />
+              <img src="./images/Root-Me.png" class="client__logo-large" alt="Logo RootMe" loading="lazy" />
             </div>
             <div class="client__info">
               <h3>RootMe</h3>
               <p class="client__role" data-fr="Pseudo : unitx" data-en="Username: unitx">Pseudo : unitx</p>
-              <p class="client__description" data-fr="Plateforme francophone de challenges de sécurité informatique avec des épreuves de hacking, programmation, cryptographie et forensics. Idéale pour progresser de débutant à expert." 
-                 data-en="French-speaking platform for computer security challenges with hacking, programming, cryptography and forensics challenges. Ideal for progressing from beginner to expert.">
+              <p
+                class="client__description"
+                data-fr="Plateforme francophone de challenges de sécurité informatique avec des épreuves de hacking, programmation, cryptographie et forensics. Idéale pour progresser de débutant à expert."
+                data-en="French-speaking platform for computer security challenges with hacking, programming, cryptography and forensics challenges. Ideal for progressing from beginner to expert."
+              >
                 Plateforme francophone de challenges de sécurité informatique avec des épreuves de hacking, programmation, cryptographie et forensics. Idéale pour progresser de débutant à expert.
               </p>
               <div class="client__tags">
@@ -76,24 +126,32 @@
                 <span class="client__tag" data-fr="🔓 Hacking" data-en="🔓 Hacking">🔓 Hacking</span>
                 <span class="client__tag" data-fr="🔐 Cryptographie" data-en="🔐 Cryptography">🔐 Cryptographie</span>
               </div>
-              <div style="margin-top: 2rem;">
-                <a href="https://www.root-me.org/unitx" target="_blank" class="btn btn--primary" data-fr="🔗 Voir mon profil" data-en="🔗 View my profile">
-                  🔗 Voir mon profil
-                </a>
+              <div style="margin-top: 2.2rem;">
+                <a
+                  href="https://www.root-me.org/unitx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn--primary"
+                  data-fr="🔗 Voir mon profil"
+                  data-en="🔗 View my profile"
+                >🔗 Voir mon profil</a>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- HackTheBox (À venir) -->
-          <div class="client__card" style="opacity: 0.6; pointer-events: none;">
+          <article class="client__card" aria-disabled="true" style="opacity: 0.6; pointer-events: none;">
             <div class="client__logo-container" style="font-size: 5rem;">
-              📦
+              <span aria-hidden="true">📦</span>
             </div>
             <div class="client__info">
               <h3>HackTheBox</h3>
               <p class="client__role" data-fr="Profil à venir" data-en="Profile coming soon">Profil à venir</p>
-              <p class="client__description" data-fr="Plateforme de pentest avec des machines virtuelles réalistes pour s'entraîner au hacking offensif. Bientôt disponible !" 
-                 data-en="Penetration testing platform with realistic virtual machines for offensive hacking training. Coming soon!">
+              <p
+                class="client__description"
+                data-fr="Plateforme de pentest avec des machines virtuelles réalistes pour s'entraîner au hacking offensif. Bientôt disponible !"
+                data-en="Penetration testing platform with realistic virtual machines for offensive hacking training. Coming soon!"
+              >
                 Plateforme de pentest avec des machines virtuelles réalistes pour s'entraîner au hacking offensif. Bientôt disponible !
               </p>
               <div class="client__tags">
@@ -102,18 +160,21 @@
                 <span class="client__tag" data-fr="⚙️ Machines" data-en="⚙️ Machines">⚙️ Machines</span>
               </div>
             </div>
-          </div>
+          </article>
 
           <!-- TryHackMe (À venir) -->
-          <div class="client__card" style="opacity: 0.6; pointer-events: none;">
+          <article class="client__card" aria-disabled="true" style="opacity: 0.6; pointer-events: none;">
             <div class="client__logo-container" style="font-size: 5rem;">
-              🎯
+              <span aria-hidden="true">🎯</span>
             </div>
             <div class="client__info">
               <h3>TryHackMe</h3>
               <p class="client__role" data-fr="Profil à venir" data-en="Profile coming soon">Profil à venir</p>
-              <p class="client__description" data-fr="Plateforme d'apprentissage guidé en cybersécurité avec des labs interactifs et des parcours structurés du débutant à l'avancé. Bientôt disponible !" 
-                 data-en="Guided cybersecurity learning platform with interactive labs and structured paths from beginner to advanced. Coming soon!">
+              <p
+                class="client__description"
+                data-fr="Plateforme d'apprentissage guidé en cybersécurité avec des labs interactifs et des parcours structurés du débutant à l'avancé. Bientôt disponible !"
+                data-en="Guided cybersecurity learning platform with interactive labs and structured paths from beginner to advanced. Coming soon!"
+              >
                 Plateforme d'apprentissage guidé en cybersécurité avec des labs interactifs et des parcours structurés du débutant à l'avancé. Bientôt disponible !
               </p>
               <div class="client__tags">
@@ -122,37 +183,50 @@
                 <span class="client__tag" data-fr="🧩 Challenges" data-en="🧩 Challenges">🧩 Challenges</span>
               </div>
             </div>
-          </div>
-
+          </article>
         </div>
 
-        <!-- Explication CTF pour les lambdas -->
-        <div class="about" style="margin-top: 6rem;">
+        <!-- Explication CTF -->
+        <div class="about" style="margin-top: 6rem; padding-bottom: 0; border-bottom: none;">
           <div class="row">
             <div class="about__content">
               <div class="about__text">
                 <h3 data-fr="Qu'est-ce qu'un CTF ?" data-en="What is a CTF?">Qu'est-ce qu'un CTF ?</h3>
-                <p data-fr="Un CTF (Capture The Flag) est un défi de cybersécurité où l'objectif est de trouver des 'flags' (drapeaux) cachés dans des systèmes volontairement vulnérables. Ces challenges permettent de développer des compétences en hacking éthique, cryptographie, analyse de code et sécurité offensive dans un environnement légal et contrôlé."
-                   data-en="A CTF (Capture The Flag) is a cybersecurity challenge where the goal is to find 'flags' hidden in intentionally vulnerable systems. These challenges help develop skills in ethical hacking, cryptography, code analysis and offensive security in a legal and controlled environment.">
-                  Un <strong>CTF (Capture The Flag)</strong> est un défi de cybersécurité où l'objectif est de trouver des "flags" (drapeaux) cachés dans des systèmes volontairement vulnérables. 
-                  Ces challenges permettent de développer des compétences en <strong>hacking éthique</strong>, <strong>cryptographie</strong>, <strong>analyse de code</strong> et <strong>sécurité offensive</strong> 
-                  dans un environnement légal et contrôlé.
+                <p>
+                  <span
+                    data-fr="Un "
+                    data-en="A "
+                  >Un </span>
+                  <strong>CTF (Capture The Flag)</strong>
+                  <span
+                    data-fr=" est un défi de cybersécurité où l'objectif est de trouver des « flags » (drapeaux) cachés dans des systèmes volontairement vulnérables. Ces challenges permettent de développer des compétences en "
+                    data-en=" is a cybersecurity challenge where the goal is to find 'flags' hidden in intentionally vulnerable systems. These challenges help develop skills in "
+                  > est un défi de cybersécurité où l'objectif est de trouver des « flags » (drapeaux) cachés dans des systèmes volontairement vulnérables. Ces challenges permettent de développer des compétences en </span>
+                  <strong data-fr="hacking éthique" data-en="ethical hacking">hacking éthique</strong>,
+                  <strong data-fr="cryptographie" data-en="cryptography">cryptographie</strong>,
+                  <strong data-fr="analyse de code" data-en="code analysis">analyse de code</strong>
+                  <span data-fr=" et " data-en=" and "> et </span>
+                  <strong data-fr="sécurité offensive" data-en="offensive security">sécurité offensive</strong>
+                  <span
+                    data-fr=" dans un environnement légal et contrôlé."
+                    data-en=" in a legal and controlled environment."
+                  > dans un environnement légal et contrôlé.</span>
                 </p>
 
                 <h3 data-fr="Pourquoi je pratique les CTF ?" data-en="Why I practice CTF?">Pourquoi je pratique les CTF ?</h3>
-                <p data-fr="Les CTF me permettent de mettre en pratique mes connaissances théoriques en cybersécurité et de développer mon esprit analytique. Chaque challenge résolu renforce ma compréhension des failles de sécurité et des techniques de protection, compétences essentielles pour mon métier d'administrateur systèmes et réseaux."
-                   data-en="CTFs allow me to put my theoretical cybersecurity knowledge into practice and develop my analytical mindset. Each challenge solved strengthens my understanding of security vulnerabilities and protection techniques, essential skills for my job as a systems and network administrator.">
-                  Les CTF me permettent de mettre en pratique mes connaissances théoriques en cybersécurité et de développer mon esprit analytique. 
+                <p
+                  data-fr="Les CTF me permettent de mettre en pratique mes connaissances théoriques en cybersécurité et de développer mon esprit analytique. Chaque challenge résolu renforce ma compréhension des failles de sécurité et des techniques de protection, compétences essentielles pour mon métier d'administrateur systèmes et réseaux."
+                  data-en="CTFs allow me to put my theoretical cybersecurity knowledge into practice and develop my analytical mindset. Each challenge solved strengthens my understanding of security vulnerabilities and protection techniques, essential skills for my job as a systems and network administrator."
+                >
+                  Les CTF me permettent de mettre en pratique mes connaissances théoriques en cybersécurité et de développer mon esprit analytique.
                   Chaque challenge résolu renforce ma compréhension des failles de sécurité et des techniques de protection, compétences essentielles pour mon métier d'administrateur systèmes et réseaux.
                 </p>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
-
   </main>
 
   <!-- ***** Footer ***** -->
@@ -160,34 +234,60 @@
     <div class="row">
       <ul class="footer__social-links">
         <li class="footer__social-link-item">
-          <a href="https://twitter.com/NollanRZH/" title="Link to Twitter Profile">
-            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter">
+          <a
+            href="https://twitter.com/NollanRZH/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profil Twitter de Nollan"
+            aria-label="Twitter"
+          >
+            <img src="./images/twitter.svg" class="footer__social-image" alt="Twitter" />
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://github.com/NollanRZH/" title="Link to Github Profile">
-            <img src="./images/github.svg" class="footer__social-image" alt="Github">
+          <a
+            href="https://github.com/NollanRZH/"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profil GitHub de Nollan"
+            aria-label="GitHub"
+          >
+            <img src="./images/github.svg" class="footer__social-image" alt="GitHub" />
           </a>
         </li>
         <li class="footer__social-link-item">
-          <a href="https://www.linkedin.com/in/nollan-d-171812341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" title="Link to Linkedin Profile">
-            <img src="./images/linkedin.svg" class="footer__social-image" alt="Linkedin">
+          <a
+            href="https://www.linkedin.com/in/nollan-d-171812341?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Profil LinkedIn de Nollan"
+            aria-label="LinkedIn"
+          >
+            <img src="./images/linkedin.svg" class="footer__social-image" alt="LinkedIn" />
           </a>
         </li>
       </ul>
 
-<p>
-  &copy; 2026 - <span data-fr="Portfolio créé par" data-en="Portfolio created by">Portfolio créé par</span>
-  <a href="index.html" class="link">Nollan</a> · 
-  <a href="mentions-legales.html" class="link" data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</a>
-</p>
+      <p>
+        &copy; 2026 -
+        <span data-fr="Portfolio créé par" data-en="Portfolio created by">Portfolio créé par</span>
+        <a href="index.html" class="link">Nollan</a> ·
+        <a href="mentions-legales.html" class="link" data-fr="Mentions légales" data-en="Legal Notice">Mentions légales</a>
+      </p>
     </div>
   </footer>
 
-  <a href="#top" class="back-to-top" title="Back to Top" aria-label="Retour en haut">
-    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  <a
+    href="#top"
+    class="back-to-top"
+    title="Retour en haut"
+    aria-label="Retour en haut"
+    data-fr-label="Retour en haut"
+    data-en-label="Back to Top"
+  >
+    <img src="./images/arrow-up.svg" alt="" aria-hidden="true" class="back-to-top__image" />
   </a>
 
-  <script src="./index.js"></script>
+  <script src="./index.js" defer></script>
 </body>
 </html>
